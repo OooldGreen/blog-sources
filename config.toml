@@ -3,7 +3,7 @@
 # And see https://gohugo.io/getting-started/configuration/ .
 
 baseURL = "http://localhost:1313/"
-title = "Jane - A super concise theme for Hugo"
+title = "Welcome to Shirley's Cabin."
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
@@ -21,7 +21,7 @@ defaultContentLanguage = "en"           # Default language to use
   languageCode = "en"
 
 [author]                  # essential                     # 必需
-  name = "xianmin"
+  name = "shirley"
 
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
@@ -29,7 +29,7 @@ defaultContentLanguage = "en"           # Default language to use
   filename = "sitemap.xml"
 
 [[menu.main]]             # config your menu              # 配置目录
-  name = "This is Home"
+  name = "Home"
   weight = 10
   identifier = "home"
   pageref = "/"
@@ -48,14 +48,14 @@ defaultContentLanguage = "en"           # Default language to use
   weight = 40
   identifier = "categories"
   pageref = "/categories/"
-[[menu.main]]
-  name = "external-link"
-  weight = 50
-  pageref = "https://gohugo.io"
+#[[menu.main]]
+#  name = "about"
+#  weight = 50
+#  pageref = "https://gohugo.io"
 
 
 [params]
-  since = "2017"            # Site creation time          # 站点建立时间
+  since = "2022"            # Site creation time          # 站点建立时间
   homeFullContent = false   # if false, show post summaries on home page. Otherwise show full content.
   rssFullContent = true     # if false, Rss feed instead of the summary
 
@@ -79,24 +79,24 @@ defaultContentLanguage = "en"           # Default language to use
   customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
 
   [params.social]                                         # 社交链接
-    a-email = "mailto:your@email.com"
-    b-stack-overflow = "http://localhost:1313"
-    c-twitter = "http://localhost:1313"
-    d-facebook = "http://localhost:1313"
-    e-linkedin = "http://localhost:1313"
-    f-google = "http://localhost:1313"
-    g-github = "http://localhost:1313"
-    h-weibo = "http://localhost:1313"
-    i-zhihu = "http://localhost:1313"
-    j-douban = "http://localhost:1313"
-    k-pocket = "http://localhost:1313"
-    l-tumblr = "http://localhost:1313"
-    m-instagram = "http://localhost:1313"
-    n-gitlab = "http://localhost:1313"
-    o-goodreads = "http://localhost:1313"
-    p-coding = "http://localhost:1313"
-    q-bilibili = "http://localhost:1313"
-    r-codeforces = "http://localhost:1313"
-    s-mastodon = "http://localhost:1313"
-    t-youtube = "http://localhost:1313"
-    u-twitch = "http://localhost:1313"
+  a-twitter = "http://localhost:1313"
+  b-github = "http://localhost:1313"
+  #  a-email = "mailto:your@email.com"
+  #  b-stack-overflow = "http://localhost:1313"  
+  #  d-facebook = "http://localhost:1313"
+  #  e-linkedin = "http://localhost:1313"
+  #  f-google = "http://localhost:1313" 
+  #  h-weibo = "http://localhost:1313"
+  #  i-zhihu = "http://localhost:1313"
+  #  j-douban = "http://localhost:1313"
+  #  k-pocket = "http://localhost:1313"
+  #  l-tumblr = "http://localhost:1313"
+  #  m-instagram = "http://localhost:1313"
+  #  n-gitlab = "http://localhost:1313"
+  #  o-goodreads = "http://localhost:1313"
+  #  p-coding = "http://localhost:1313"
+  #  q-bilibili = "http://localhost:1313"
+  #  r-codeforces = "http://localhost:1313"
+  #  s-mastodon = "http://localhost:1313"
+  #  t-youtube = "http://localhost:1313"
+  #  u-twitch = "http://localhost:1313"
