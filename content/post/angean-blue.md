@@ -26,7 +26,6 @@ mathjax: false
 #   main:
 #     parent: "docs"
 #     weight: 1
-#	{{< gallery dir="/image/angean-blue/" >}}
 ---
 
 <!--more-->
@@ -36,8 +35,8 @@ mathjax: false
 
 {{< gallery >}}
   {{< figure src="/image/IMG_0930.jpg" title="希腊酸奶，酸酸甜甜！">}}
-  {{< figure src="/images/IMG_0934.jpg" title="不知道包了什么蔬菜的肉肠">}}
-  {{< figure src="/images/IMG_0933.jpg" title="米团子怎么也这么好吃呀😍">}}
-  {{< figure src="/images/IMG_0937.jpg" title="香香白酱意面，这个酱更好吃呀，好香好香">}}
-  {{< figure src="/images/IMG_0936.jpg" title="一盘牛扒～最爱吃肉！还有可爱小土豆🥔">}}
+  {{< figure src="/image/IMG_0934.jpg" title="不知道包了什么蔬菜的肉肠">}}
+  {{< figure src="/image/IMG_0933.jpg" title="米团子怎么也这么好吃呀😍">}}
+  {{< figure src="/image/IMG_0937.jpg" title="香香白酱意面，这个酱更好吃呀，好香好香">}}
+  {{< figure src="/image/IMG_0936.jpg" title="一盘牛扒～最爱吃肉！还有可爱小土豆🥔">}}
 {{< /gallery >}}

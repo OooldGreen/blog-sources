@@ -5,7 +5,7 @@ lastmod: 2022-10-17T10:11:51+08:00
 draft: false
 keywords: ["Hugo", "jane"]
 description: ""
-tags: ["Jane"]
+tags: ["Jane", "blog"]
 categories: ["Blog"]
 author: ""
 
@@ -14,7 +14,7 @@ author: ""
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
 comment: false
-toc: false
+toc: true
 autoCollapseToc: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
 contentCopyright: false
@@ -32,50 +32,54 @@ mathjax: false
 # Hugo搭建
 ## 下载Hugo
 参考[官方文档](https://gohugo.io/getting-started/installing/)
-### 1. 二进制（MACOS）
-```
-1 进入[Hugo Release](https://github.com/gohugoio/hugo/releases)
-2 下载最新版本，解压缩（记得要下载extend版本）
-3 把hugo文件放进/usr/local/bin
-4 输入hugo version检查版本号，出现版本号，安装成功
-```
-### 2. Homebrew
-或者更简单，如果你有homebrew，直接：
-```
+### 方法一：二进制（MACOS）
+
+
+1. 进入[Hugo Release](https://github.com/gohugoio/hugo/releases)
+2. 下载最新版本，解压缩（记得要下载`extend`版本）
+3. 把`hugo`文件放进`/usr/local/bin`
+4. 输入`hugo version`检查版本号，出现版本号，安装成功
+
+
+### 方法二：Homebrew
+或者更简单，如果你有`homebrew`，直接：
+```text
 brew install hugo
 ```
 ## 生成我的第一支博客
 在我的博客文件夹下输入以下代码：
-``` markdown
+```text
 hugo new post/my-first-post.md
 ```
 
-Tips:
-- 我选择的主题是[jane](https://github.com/xianmin/hugo-theme-jane)，配置的博客目录在post
-- 名字一定要加后缀！起名字最好就是英文小写+短横线～
+> Tips:
+>
+>  我选择的主题是[jane](https://github.com/xianmin/hugo-theme-jane)，配置的博客目录在`post`
+> 
+>  名字一定要加后缀！起名字最好就是英文小写+短横线～
 
 ## 部署到Github
-### 准备工作
-#### 先有一个github账号
+
+### 先有一个Github账号
+
+
 1. 进入[github](https://github.com/)（此处可能需要🪜）
-2. 输入邮箱，点击Sign up for GitHub创建账号
+2. 输入邮箱，点击`Sign up for GitHub`创建账号
 3. 然后登录就好啦
-#### 创建新的repository
-> 一共需要创建两个仓库：
->   一个网站仓库，名字必须是`xxxx.github.io`
->   一个存放博客源码的仓库，我的参考[necolas](https://blog.nekolas.cafe/posts/hugo/hugo-deploy-your-blog/)的博客叫做`Hugo Sources` 
 
-##### 先建一个仓库
-```
-1 点击右上角加号`+` -> `new repository`
-2 输入你的`repository name`，必须是`xxxx.github.io`，例如我的仓库`snowcabin.gihub.io`
-3 记得检查一下是否选择`public`（默认应该就是这个啦）
-4 点击`create repository`创建仓库
-```
 
-##### 再建一个仓库 ovo
-重复上面的步骤，把本地博客文件关联到这个仓库（按照GitHub的指示走就完全可以）：
-```
+### 创建新的repository
+
+
+1. 点击右上角加号`+` -> `new repository`
+2. 输入你的`repository name`，例如`myblog`
+3. 记得检查一下是否选择`public`（默认应该就是这个啦）
+4. 点击`create repository`创建仓库
+
+
+### 把本地博客文件关联到这个仓库
+这步按照`GitHub`创建仓库后的指示走就完全可以
+```text
 git init
 git status
 git add .
@@ -83,8 +87,50 @@ git commit -m "start"
 git remote add origin git@github.com:OooldGreen/Hugo-Sources.git
 git push -u origin main
 ```
-这里我设置了ssh代理，因为https拉取不到仓库，你懂的～
+这里我设置了`ssh`代理，因为`https`拉取不到仓库，你懂的～
 具体怎么设置代理，我看的这篇：<https://zhuanlan.zhihu.com/p/481574024>
+
+## Vercel部署
+[Vercel](https://vercel.com/login?next=)在这里，它方便快捷。
+当然如果用`github pages`或者别的也可以～
+
+1. 先用`GitHub`登录，进入`DashBoard`
+2. 点击`Create a New Project`
+3. 关联`GitHub`，导入`myblog`仓库，点击`Deploy`
+4. 出现`Congratulations！`就成功啦，进入`DashBoard`就可以点击进入自己的网站啦
+
+## 自定义域名
+如果你觉得自动生成的域名不够炫酷，还可以选择自定义域名。只要你有心，不花钱钱也是可以做到的哦（0v0）。我全程参考了[necolas小站](https://blog.nekolas.cafe/posts/hugo/hugo-custom-domain/)的教程😁
+
+如果想完成此步，需要准备两个网站：
+
+[1. 免费租域名]()
+
+[2. 管理域名的腾讯云]()
+
+### 选择你喜欢的域名
+1. 在搜索框中搜索域名是否可用
+2. 复制全部域名再搜索一遍
+3. 此时购物车`+1`，点击`checkout`
+4. 拥有时长选择`12months`，结账完事～
+
+页面记得留着，等会儿还得用
+
+### 在腾讯云配置
+1. 腾讯云需要实名验证，验证完之后进入“我的域名”
+2. 输入域名，进入`DNS`检测，检测会出问题，复制正确的配置
+3. 回到`freedom`粘贴配置
+4. 再回到腾讯云重新检测，这时就没有问题啦
+
+### 在Vecel中配置
+1. 点击`Settings -> Domains `
+2. 输入你已经拥有的域名，点击`add`，默认选项即可
+3. 此时会显示域名不可用
+4. 在腾讯云中`点击域名 -> 添加记录`
+5. 按照提示`vecel`中的`"type"`, `"name"`, `"value"`进行配置，分别对应“记录类型”, “主机记录“, ”记录值“
+
+最后耐心等待一会儿就可以看到自己专属的域名啦～
+
 
 # Jane相关
 Jane Theme Preview: <https://www.xianmin.org/hugo-theme-jane/post/jane-theme-preview/#>
