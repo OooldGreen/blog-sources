@@ -2,7 +2,7 @@
 # If you want to see the full configuration, please check `full-config.toml` .
 # And see https://gohugo.io/getting-started/configuration/ .
 
-baseURL = "http://localhost:1313/"
+baseURL = "https://www.snowcabin.tk/"
 title = "Shirley's Cabin"
 enableRobotsTXT = true
 enableEmoji = true
@@ -74,7 +74,7 @@ defaultContentLanguage = "en"           # Default language to use
   moreMeta = true
 
   # show language chooser in menu
-  showMenuLanguageChooser = true
+  # showMenuLanguageChooser = true
 
   showAuthorInfo = false # show author info below the article
 
@@ -91,7 +91,7 @@ defaultContentLanguage = "en"           # Default language to use
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
   customCSS = ['custom.scss']            # if ['custom.css'], load '/static/css/custom.css' file
-  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+  customJS = ['custom.js']             # if ['custom.js'], load '/static/js/custom.js' file
 
   [params.social]                                         # 社交链接
   a-twitter = "https://twitter.com/home"
@@ -117,20 +117,10 @@ defaultContentLanguage = "en"           # Default language to use
   #  u-twitch = "http://localhost:1313"
 
 # 评论系统
-[params.giscus]         # giscus is a comment system based on GitHub Discussions. see https://giscus.app
+ [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
     enable = true
-    repo = "xianmin/comments-for-hugo-theme-jane"
-    repoId = "MDEwOlJlcG9zaXRvcnkxNDAyNDYzNjc="
-    category = "Announcements"
-    categoryId = "DIC_kwDOCFv9X84CRRWF"
-    # mapping = "pathname"  # comment value is the default value
-    # strict = 0
-    # reactionsEnabled = 1
-    # emitMetadata = 0
-    # inputPosition = "top"
-    # theme = "light"
-    # lang = "en"
-    # lazyLoading = false
+    repo = "xianmin/comments-for-hugo-theme-jane"    # The repo to store comments
+    issueTerm = "pathname"
 
 # 代码语法高亮
 # more information https://gohugo.io/getting-started/configuration-markup/#goldmark

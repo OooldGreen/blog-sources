@@ -20,6 +20,10 @@
       padding-left: 20px;
       list-style-type: none;
 
+      li > a:hover{
+        color: #900;
+      }
+
       ul {
         // list-style: disc;
 
