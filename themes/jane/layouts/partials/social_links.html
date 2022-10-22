@@ -13,7 +13,7 @@
   {{- end }}
 {{- end }}
 
-<!-- {{/* RSS icon  */}}
+{{/* RSS icon  */}}
 {{ with .Site.GetPage "home" -}}
   {{- with .OutputFormats.Get "RSS" -}}
   <a href="{{ .Permalink }}" rel="noopener {{ .Rel }}" type="{{ .MediaType.Type }}"
@@ -21,4 +21,4 @@
     {{ partial "svg/rss.svg" }}
   </a>
   {{ end -}}
-{{- end -}} -->
+{{- end -}}
