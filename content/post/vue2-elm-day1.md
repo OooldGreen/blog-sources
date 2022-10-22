@@ -2,7 +2,7 @@
 title: "Vue2 Elm 项目记录Day1"
 date: 2022-10-19T09:27:45+08:00
 lastmod: 2022-10-19T09:27:45+08:00
-draft: false
+draft: true
 keywords: ["vue", "elm", "项目记录"]
 description: ""
 tags: ["vue2", "项目记录"]

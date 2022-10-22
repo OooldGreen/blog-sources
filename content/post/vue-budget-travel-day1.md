@@ -52,6 +52,7 @@ mathjax: false
 ```js
 meta: { isLogin: true }
 ```
+
 再配置路由守卫进行判断，如果需要登录权限，则判断是否已经登陆，若没有登录跳转登录页面，否则放行。
 ```js
 // 路由拦截：路由前置守卫
@@ -200,7 +201,44 @@ res.send(token)
 ```
 
 ### 存储用户数据（vuex和localstorage）
-
+#### vuex存储
+在`store`中设置`token`和清空用户信息
+```js
+state: {
+    userInfo: {
+        username: '',
+        token: null
+    }
+},
+mutations: {
+    // 设置token
+    setUser(state, payload) {
+        state.userInfo = payload;
+    },
+    // 清空用户信息
+    clearUser(state) {
+        state.userInfo = {
+            username: '',
+            token: null
+        }
+    }
+}
+```
+在`Login.vue`配置存储一个对象包含`token`和用户名，存储在`vue`x中
+```js
+//Login.vue
+// 存储数据并用vuex共享资源
+let obj = {
+    token: res.data.token,
+    username: jwt(res.data.token).user
+}
+this.$store.commit('setUser', obj)
+```
+#### 存储到localstorage
+```js
+// Login.vue
+localStorage.setItem('userInfo', JSON.stringify(obj)) //对象需要转化成字符串
+```
 
 ## 遇到的问题
 
