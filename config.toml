@@ -116,6 +116,7 @@ defaultContentLanguage = "en"           # Default language to use
   #  t-youtube = "http://localhost:1313"
   #  u-twitch = "http://localhost:1313"
 
+# 评论系统
 [params.giscus]         # giscus is a comment system based on GitHub Discussions. see https://giscus.app
     enable = true
     repo = "xianmin/comments-for-hugo-theme-jane"
@@ -131,6 +132,7 @@ defaultContentLanguage = "en"           # Default language to use
     # lang = "en"
     # lazyLoading = false
 
+# 代码语法高亮
 # more information https://gohugo.io/getting-started/configuration-markup/#goldmark
 [markup]
   defaultMarkdownHandler = "goldmark"  # blackfriday or goldmark
@@ -152,3 +154,10 @@ defaultContentLanguage = "en"           # Default language to use
     noHl = false
     style = 'friendly'
     tabWidth = 4
+
+# Highlight options.
+# See https://gohugo.io/content-management/syntax-highlighting/
+PygmentsCodeFences = true # Enable syntax highlighting with GitHub flavoured code fences
+PygmentsUseClasses = true # Use CSS classes to format highlighted code
+PygmentsCodefencesGuessSyntax = true
+PygmentsOptions = "linenos=table"
