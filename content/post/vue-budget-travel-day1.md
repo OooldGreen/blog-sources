@@ -30,7 +30,7 @@ mathjax: false
 穷游小项目跟练第一天。
 <!--more-->
 
-## 创建vue项目
+# 创建vue项目
 
 1. 控制台方法  
     创建项目：
@@ -45,7 +45,7 @@ mathjax: false
 2. vue ui方法  
     打开vue-ui，直接进行创建和配置
 
-## 配置路由拦截
+# 配置路由拦截
 
 配置路由前置守卫用于校验用户是否有登录权限。
 先在路由界面配置`meta`判断是否需要权限
@@ -72,9 +72,9 @@ router.beforeEach((to, from, next) => {
 })
 ```
 
-## 写登录页面
-### 引入element-ui
-#### 全局引入
+# 写登录页面
+## 引入element-ui
+### 全局引入
 在`main.js`中写入以下代码
 ```js
 import Vue from 'vue';
@@ -90,7 +90,7 @@ new Vue({
 });
 ```
 
-#### 按需导入
+### 按需导入
 全局引入并不是最好的方法，我们可以使用按需引入来减小项目体积，优化项目。  
 
 首先借助`babel-plugin-component`插件，在`babel.config.js`中写入以下代码：
@@ -132,7 +132,7 @@ Vue.use(Input)
 import './plugins/element'
 ```
 
-### 创建一个简易的登录接口
+## 创建一个简易的登录接口
 第一步：安装`express`和`jwt`
 ```text
 npm i express -S
@@ -172,7 +172,7 @@ npm i express -S
     ```
 第四步：打开`server`文件夹的终端窗口，`nodemon`启动（安装`nodemon`可以实时更新不用一直关闭重启）
 
-### 生成token
+## 生成token
 第一步：安装`jwt`
 ```js
 npm i jsonwebtoken -S
@@ -200,8 +200,8 @@ const token = jwt.sign({ user, id: xxx }, secret.secretKey, { expiresIn: 20 })
 res.send(token)
 ```
 
-### 存储用户数据（vuex和localstorage）
-#### vuex存储
+## 存储用户数据（vuex和localStorage）
+### vuex存储
 在`store`中设置`token`和清空用户信息
 ```js
 state: {
@@ -224,7 +224,7 @@ mutations: {
     }
 }
 ```
-在`Login.vue`配置存储一个对象包含`token`和用户名，存储在`vue`x中
+在`Login.vue`配置存储一个对象包含`token`和用户名，存储在`vuex`中
 ```js
 //Login.vue
 // 存储数据并用vuex共享资源
@@ -234,22 +234,22 @@ let obj = {
 }
 this.$store.commit('setUser', obj)
 ```
-#### 存储到localstorage
+### 存储到localStorage
 ```js
 // Login.vue
 localStorage.setItem('userInfo', JSON.stringify(obj)) //对象需要转化成字符串
 ```
 
-## 遇到的问题
+# 遇到的问题
 
-### beforeEach is not a function
+## beforeEach is not a function
 使用导航守卫时页面报错了：`beforeEach is not a function`
 
 检查后发现我直接daochule`export default new Router({...})`，然后写的`beforeEach`
 
 应该先new一个实例，给声明的路由实例添加方法才对：`const router = new Router({ routes })`
 
-### vuex版本问题
+## vuex版本问题
 用的`vue2`但是`vuex`装的是4，报错，检查`this.$store`输出为`undefined`
 
 改成`vue2`对应的`vuex3`： `npm install vuex@3`

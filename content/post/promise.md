@@ -2,7 +2,7 @@
 title: "Promise对象"
 date: 2022-10-18T15:35:31+08:00
 lastmod: 2022-10-18T15:35:31+08:00
-draft: false
+draft: true
 keywords: ["frontend", "promise", "js", "javascript", "es6"]
 description: ""
 tags: ["Frontend", "JS", "ES6"]
@@ -34,7 +34,7 @@ mathjax: false
 
 <!--more-->
 
-## 为什么要有Promise对象
+# 为什么要有Promise对象
 
 一句话：解决回调地狱(`callback hell`)
 
@@ -42,18 +42,18 @@ mathjax: false
 
 而如果有了Promise，就可以使用直接返回回调，还可以使用不同的方法使用这些回调，这样代码看起来就简洁明了多啦～
 
-## Promise对象是什么
+# Promise对象是什么
 
 是一个异步编程的解决方案。一共有三种状态：`PENDING`、`FULFILLED/RESOLVED`、`REJECTED`
 
 
-## Promise对象怎么用
+# Promise对象怎么用
 
 
-## 还有哪些方法捏
+# 还有哪些方法捏
 
 
-## async/await又是啥？
+# async/await又是啥？
 
 
 ## 参考

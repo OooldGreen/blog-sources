@@ -33,9 +33,9 @@ mathjax: true
 <!--more-->
 此文档为vue2项目elm的练手记录，从前端页面开始做起，时间：2022.9.7 晚上9:30
 
-## mongodb配置
+# mongodb配置
 
-### 开启mongodb
+## 开启mongodb
 
 1. `mongodb`的`bin`用终端打开
 
@@ -43,13 +43,13 @@ mathjax: true
 
 > Tip：如果发生错误是因为上一次没有正确的关闭mongodb，需要把.lock文件删除，再重启
 
-### 连接navicat
+## 连接navicat
 
 ![连接`navicat`](/image/vue-elm/navicat.png)
 
 若果第一步开启好了，点击左下角的test很快就会提示测试连接成功，直接确定就好了
 
-### 导入数据库
+## 导入数据库
 
 1. 对于`.metadata.json`文件：  `mongoimport -d elm_db -c activities --file activities.metadata.json`
 
@@ -57,13 +57,13 @@ mathjax: true
 
 3. 在`navicat`中刷新就可以看到数据被导入了
 
-### 正确的关闭mongodb
+## 正确的关闭mongodb
 
 使用`Ctrl + C`
 
 > `Warning`：千万不能使用`kill -9 <pid>`,因为`MongoDB`使用`mmap`方式进行数据文件管理，也就是说写操作基本是在内存中进行，写操作会被每隔60秒(`syncdelay`设定)的`flush`到磁盘里。如果在这60秒内`flush`处于停止事情我们进行`kill -9`那么从上次`flush`之后的写入数据将会全部丢失。
 
-### 其他mongodb操作
+## 其他mongodb操作
 
 当前数据库：`db`
 
@@ -71,7 +71,7 @@ mathjax: true
 
 切换到`admin`数据库：`use admin`
 
-## Eslint配置
+# Eslint配置
 - 关闭校验
 
 在根目录下创建vue.config.js
@@ -95,7 +95,7 @@ rules: {
 }
 ```
 
-## 路由配置
+# 路由配置
 创建`Home.vue`，在路由js中引入并配置：
 ``` js
 const routes = [
@@ -111,14 +111,13 @@ const routes = [
 ]
 ```
 
-## 封装公共组件
+# 封装公共组件
 
 
-## 定位功能
+# 定位功能
 通过跨域获取当前地理位置
 
-
-## 目标功能
+# 目标功能
 
 - [ ] 定位功能
 - [ ] 选择城市
