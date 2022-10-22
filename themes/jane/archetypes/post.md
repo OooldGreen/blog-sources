@@ -13,7 +13,7 @@ author: ""
 # weight: 1
 # You can also close(false) or open(true) something for this content.
 # P.S. comment can only be closed
-comment: false
+comment: true
 toc: false
 autoCollapseToc: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
