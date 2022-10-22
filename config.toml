@@ -64,8 +64,23 @@ defaultContentLanguage = "en"           # Default language to use
   keywords = ["Hugo", "theme","jane"]
   description = "records for frontend learning and daily life."
 
+  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
+  archive-paginate = 10
+
   # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
   dateFormatToUse = "2006-01-02"
+
+  # show word count and read time ?                       # 是否显示字数统计与阅读时间
+  moreMeta = true
+
+  # show language chooser in menu
+  showMenuLanguageChooser = true
+
+  showAuthorInfo = false # show author info below the article
+
+  # Optional custom wallpaper image URL. Can be a remote image or local /static/img/wallpaper.jpg (make sure it has a small filesize for quick site painting)
+  # wallpaper = "/static/img/wallpaper.jpg"
+  # wallpaper = "https://followingmyfeet.com/wp-content/uploads/2018/02/825_2229-HDR.jpg"
 
   # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
   # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
@@ -100,3 +115,40 @@ defaultContentLanguage = "en"           # Default language to use
   #  s-mastodon = "http://localhost:1313"
   #  t-youtube = "http://localhost:1313"
   #  u-twitch = "http://localhost:1313"
+
+[params.giscus]         # giscus is a comment system based on GitHub Discussions. see https://giscus.app
+    enable = true
+    repo = "xianmin/comments-for-hugo-theme-jane"
+    repoId = "MDEwOlJlcG9zaXRvcnkxNDAyNDYzNjc="
+    category = "Announcements"
+    categoryId = "DIC_kwDOCFv9X84CRRWF"
+    # mapping = "pathname"  # comment value is the default value
+    # strict = 0
+    # reactionsEnabled = 1
+    # emitMetadata = 0
+    # inputPosition = "top"
+    # theme = "light"
+    # lang = "en"
+    # lazyLoading = false
+
+# more information https://gohugo.io/getting-started/configuration-markup/#goldmark
+[markup]
+  defaultMarkdownHandler = "goldmark"  # blackfriday or goldmark
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  # Highlight options. See https://gohugo.io/content-management/syntax-highlighting/
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noHl = false
+    style = 'friendly'
+    tabWidth = 4
