@@ -4,7 +4,7 @@
     src="https://utteranc.es/client.js"
     // repo 就是访问的仓库，格式 用户名/仓库名
     // 个人就是 repo="wsafight/personBlog"
-    repo="OooldGreen/blog-sources"
+    repo="[OooldGreen/blog-sources]"
 
     // 选定的当前blog 与 issue 之间的关系
     // 个人使用的是不会自动创建的 issue-number，每个issue都有自己的number。该选项是使用特定的issue

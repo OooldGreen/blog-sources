@@ -34,11 +34,11 @@ mathjax: false
 
 1. 控制台方法  
     创建项目：
-    ```text
+    ```
     vue create filename
     ```
     启动项目：
-    ```text
+    ```
     cd filename
     npm run server
     ```
@@ -134,7 +134,7 @@ import './plugins/element'
 
 ## 创建一个简易的登录接口
 第一步：安装`express`和`jwt`
-```text
+```
 npm i express -S
 ```
 
@@ -241,7 +241,6 @@ localStorage.setItem('userInfo', JSON.stringify(obj)) //对象需要转化成字
 ```
 
 # 遇到的问题
-
 ## beforeEach is not a function
 使用导航守卫时页面报错了：`beforeEach is not a function`
 
