@@ -1,5 +1,5 @@
 // 添加评论区utterance
-<script
+{/* <script
     // 加载的客户端脚本
     src="https://utteranc.es/client.js"
     // repo 就是访问的仓库，格式 用户名/仓库名
@@ -13,4 +13,11 @@
     theme="github-light"
     crossorigin="anonymous"
     async>
+</script> */}
+<script src="https://utteranc.es/client.js"
+        repo="[OooldGreen/blog-sources]"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
 </script>
