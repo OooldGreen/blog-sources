@@ -2,7 +2,7 @@
 # If you want to see the full configuration, please check `full-config.toml` .
 # And see https://gohugo.io/getting-started/configuration/ .
 
-baseURL = "https://www.snowcabin.tk/"
+baseURL = "http://www.snowcabin.tk/"
 title = "Shirley's Cabin"
 enableRobotsTXT = true
 enableEmoji = true
@@ -119,7 +119,7 @@ defaultContentLanguage = "en"           # Default language to use
 # CDN设置
 #-------------------------------------------------------------------
   [params.publicCDN]        # load these files from public cdn
-    enable = true
+    enable = false
     jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>'
     slideout = '<script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>'
     # gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
@@ -148,7 +148,7 @@ defaultContentLanguage = "en"           # Default language to use
   [markup.highlight]
     anchorLineNos = true
     codeFences = true
-    guessSyntax = true
+    guessSyntax = false
     hl_Lines = ''
     hl_inline = false
     lineAnchors = ''
