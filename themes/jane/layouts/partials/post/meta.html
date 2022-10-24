@@ -1,5 +1,5 @@
 <div class="post-meta">
-  <div class="post-meta-author">
+  <!-- <div class="post-meta-author">
     by
     {{- $author_id := .Params.author | default .Site.Author.name -}}
     {{- $author := (index ($.Site.Data.authors | default dict) $author_id) -}}
@@ -15,7 +15,7 @@
     {{ else }}
       {{ $author_name | safeHTML }}
     {{ end }}
-  </div>
+  </div> -->
 
   <div class="post-meta-time">
     <time datetime="{{ .Date.Format "2006-01-02" }}">
