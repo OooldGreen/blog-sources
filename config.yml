@@ -154,8 +154,8 @@ markup:
     lineNos: true
     # noClasses: false
     style: monokai
-# rss订阅链接修改
-outputFormats:
-  outputFormats.FEED:
-    mediatype: 'application/rss'
-    baseName: 'index'
+# # rss订阅链接修改
+# outputFormats:
+#   outputFormats.FEED:
+#     mediatype: 'application/rss'
+#     baseName: 'index'
