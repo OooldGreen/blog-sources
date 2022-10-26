@@ -5,27 +5,28 @@ lastmod: 2022-10-18T15:35:31+08:00
 draft: true
 keywords: ["frontend", "promise", "js", "javascript", "es6"]
 description: ""
-tags: ["Frontend", "JS", "ES6"]
+tags: ["JS", "ES6"]
 categories: ["ES6"]
 author: ""
 
-# Uncomment to pin article to front page
-# weight: 1
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
-comment: true
-toc: true
-autoCollapseToc: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
-reward: false
-mathjax: false
-
-# Uncomment to add to the homepage's dropdown menu; weight = order of article
-# menu:
-#   main:
-#     parent: "docs"
-#     weight: 1
+showToc: true
+TocOpen: true
+draft: true
+hidemeta: false
+comments: true
+description: ""
+# canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: false
 ---
 
 汇总`Promise`对象的由来、用法、方法和`async/await`

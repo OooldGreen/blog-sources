@@ -9,23 +9,24 @@ tags: ["vue", "项目记录"]
 categories: ["vue","项目记录"]
 author: ""
 
-# Uncomment to pin article to front page
-# weight: 1
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
-comment: true
-toc: true
-autoCollapseToc: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
-reward: false
-mathjax: false
-
-# Uncomment to add to the homepage's dropdown menu; weight = order of article
-# menu:
-#   main:
-#     parent: "docs"
-#     weight: 1
+showToc: true
+TocOpen: true
+draft: false
+hidemeta: false
+comments: true
+description: ""
+# canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: false
 ---
 穷游小项目跟练第一天。
 <!--more-->

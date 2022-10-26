@@ -9,30 +9,31 @@ tags: ["Jane", "blog", "域名", "markdown"]
 categories: ["Blog"]
 author: ""
 
-# Uncomment to pin article to front page
-# weight: 1
-# You can also close(false) or open(true) something for this content.
-# P.S. comment can only be closed
-comment: true
-toc: true
-autoCollapseToc: false
-# You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: false
-reward: false
-mathjax: true
-
-# Uncomment to add to the homepage's dropdown menu; weight = order of article
-# menu:
-#   main:
-#     parent: "docs"
-#     weight: 1
+showToc: true
+TocOpen: true
+draft: false
+hidemeta: false
+comments: true
+description: ""
+# canonicalURL: "https://canonical.url/to/page"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+ShowWordCount: true
+ShowRssButtonInSectionTermList: true
+UseHugoToc: false
 ---
 
 从小到大都对属于自己的东西格外着迷，可能是骨子里的控制欲作祟吧，于是突发奇想地想要拥有属于自己的博客。
 
-就当是我在这动荡时代的自留地吧，一间抵御风寒酷暑的小木屋。
+就当是我在这动荡时代的自留地。
 
-这篇博客一共分为四个部分：用`hugo`搭建个人博客，用`vercel`部署博客，自定义域名，最后是一些有用的文档内容。
+这篇博客一共分为四个部分：`hugo`搭建个人博客，`vercel`部署博客，自定义域名，最后是一些有用的文档内容。
 
 <!--more-->
 
@@ -137,7 +138,7 @@ git push -u origin main
 
 如果想完成此步，需要准备两个网站：
 
-[1. 免费租域名](https://my.freenom.com)
+[1. freenom租免费域名](https://my.freenom.com)
 
 [2. 管理域名的腾讯云](https://console.dnspod.cn/dns)
 
@@ -164,9 +165,24 @@ git push -u origin main
 
 最后耐心等待一会儿就可以看到自己专属的域名啦～
 
+### Vercel问题修复
+后来遇到一点问题：
+换了[PaperMod](https://themes.gohugo.io/themes/hugo-papermod/)主题之后编译不成功，问题如下
+```
+function "warnf" not defined
+```
+应该是Hugo版本问题，我指定了旧版的`Hugo`，在`vercel -> Settings -> Enviroment Variables`中填写
+```
+NAME: HUGO_VERSION
+VALUE: 0.83.0
+```
+重新编译就可以了。
+
+# PaperMod相关
+`PaperMod's`百科：<https://github.com/adityatelange/hugo-PaperMod/wiki#welcome-to-the-papermods-wiki>
 
 # Jane相关
-Jane Theme Preview: <https://www.xianmin.org/hugo-theme-jane/post/jane-theme-preview/#>
+`Jane Theme Preview: `<https://www.xianmin.org/hugo-theme-jane/post/jane-theme-preview/#>
 
 常用配置：<https://sixdian.com/post/jane-theme-config/>
 

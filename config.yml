@@ -27,22 +27,23 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
-  ShowReadingTime: true
-  ShowShareButtons: true
+  ShowReadingTime: true  # 阅读时间
+  ShowShareButtons: false # 分享按钮
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
+  ShowCodeCopyButtons: true # 复制代码按钮
+  ShowWordCount: true # 博客字数
   ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
+  UseHugoToc: false
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: true
+  comments: true  # 开启评论
   hidemeta: false
   hideSummary: false
   showtoc: true
   tocopen: true
 
+  # 配置网站图标
   assets:
     disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
@@ -79,13 +80,16 @@ params:
     Title: "Shirley \U0001F44B"
     Content: Welcome to Shirley's cabin!
 
+  # 社交链接
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/home"
     - name: github
       url: "https://github.com/OooldGreen?tab=repositories"
+    - name: twitter
+      url: "https://twitter.com/home"
     - name: email
-      url: "954895224@qq.com"
+      url: "mailto:954895224@qq.com"
+    - name: RSS
+      url: "index.xml"
     # - name: stackoverflow
     #   url: "https://stackoverflow.com"
 
@@ -117,6 +121,7 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+# 右上角菜单
 menu:
   main:
     - identifier: archives
@@ -154,8 +159,3 @@ markup:
     lineNos: true
     # noClasses: false
     style: monokai
-# # rss订阅链接修改
-# outputFormats:
-#   outputFormats.FEED:
-#     mediatype: 'application/rss'
-#     baseName: 'index'
