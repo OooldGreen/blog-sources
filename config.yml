@@ -1,5 +1,6 @@
 baseURL: "https://www.snowcabin.tk/"
 title: Snow Cabin
+enableEmoji: true
 paginate: 10
 theme: PaperMod
 
@@ -145,7 +146,7 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
-    
+
     # -------chroma配置-------
     # anchorLineNos: true
     codeFences: true
@@ -153,3 +154,8 @@ markup:
     lineNos: true
     # noClasses: false
     style: monokai
+# rss订阅链接修改
+outputFormats:
+  outputFormats.FEED:
+    mediatype: 'application/rss'
+    baseName: 'index'
