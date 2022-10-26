@@ -17,7 +17,7 @@ comment: true
 toc: true
 autoCollapseToc: false
 # You can also define another contentCopyright. e.g. contentCopyright: "This is another copyright."
-contentCopyright: true
+contentCopyright: false
 reward: false
 mathjax: true
 
