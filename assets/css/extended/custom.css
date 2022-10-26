@@ -1,0 +1,46 @@
+/* chroma style */
+.chroma {
+  background-color: unset !important;
+}
+
+/* 设置博客内容宽度 */
+.main {
+  max-width: calc(var(--main-width) + var(--gap) * 6);
+}
+
+/* theme color */
+/* 配色：#373737 #C0B283 #DCD0C0 #F4F4F4 */
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 3px;
+  --theme: #DCD0C0;
+  --entry: #F4F4F4;
+  --primary: #373737;
+  --secondary: rgb(108, 108, 108);
+  --tertiary: #DCD0C0;
+  --content: #373737;
+  --hljs-bg: rgb(28, 29, 33);
+  --code-bg: #F4F4F4;
+  --border: rgb(238, 238, 238);
+}
+.post-single {
+  padding: 30px;
+  background-color: #F4F4F4;
+  border-radius: 3px;
+  /* width: 1000px; */
+}
+.toc {
+  background-color: #F4F4F4;
+  border: 0px;
+}
+/* .list {
+  background-color: #DCD0C0;
+} */
+.post-content code {
+  border-color: #DCD0C0;
+}
