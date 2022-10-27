@@ -14,6 +14,12 @@
   .post-single {
     padding: 20px !important;
   }
+  .first-entry {
+    padding: 0px 20px;
+  }
+  .post-entry {
+    margin: 20px;
+  }
 }
 
 /* 配色: #ebe8e1 #dedad2 #6b6e77 #595a5c #434446 ------------------------- */
