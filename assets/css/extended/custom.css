@@ -8,8 +8,8 @@
   max-width: calc(var(--main-width) + var(--gap) * 6);
 }
 
-/* theme color */
-/* 配色：#373737 #C0B283 #DCD0C0 #F4F4F4 */
+/* 博客配色 */
+/* 配色: #dedad2 #92939b #6b6e77 #414452------------------------- */
 :root {
   --gap: 24px;
   --content-gap: 20px;
@@ -18,26 +18,49 @@
   --header-height: 60px;
   --footer-height: 60px;
   --radius: 3px;
-  --theme: #DCD0C0;
+  /* post背景颜色 */
+  --theme:  #dedad2;
+  /* 博客卡片背景颜色 */
   --entry: #F4F4F4;
-  --primary: #373737;
-  --secondary: rgb(108, 108, 108);
-  --tertiary: #DCD0C0;
-  --content: #373737;
+  /* 网页字体颜色 */
+  --primary: #414452; 
+  --secondary: #6b6e77;
+  /* tag等背景颜色 */
+  --tertiary: #f4f4f4;
+  /* post内容字体颜色 */
+  --content: #414452;
   --hljs-bg: rgb(28, 29, 33);
-  --code-bg: #F4F4F4;
+  /* 代码背景颜色 */
+  --code-bg: rgb(235, 232, 225);
+  /* 边框颜色 */
   --border: rgb(238, 238, 238);
 }
+/* 单个博客框背景颜色 */
 .post-single {
   padding: 30px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   border-radius: 3px;
-  /* width: 1000px; */
 }
+/* 目录背景颜色 */
 .toc {
   background-color: #F4F4F4;
-  border: 0px;
+  border: none;
 }
 .list {
-  background-color: #DCD0C0;
+  background-color: #dedad2;
+}
+/* 博客尾部标签颜色、下一篇博客功能 */
+.post-tags a,
+.paginav {
+  border: none;
+}
+.breadcrumbs a {
+  color: var(--secondary)
+}
+/* ------------------------------------------------------------ */
+
+/* 页面下方图标格式 */
+.footer .entry-footer .social-icons a{
+  /* 去除下划线 */
+  border-bottom: none; 
 }
