@@ -1,7 +1,7 @@
 /* chroma style */
-.chroma {
+/* .chroma {
   background-color: unset !important;
-}
+} */
 
 /* 设置博客内容宽度 */
 .main {
@@ -16,7 +16,7 @@
   }
 }
 
-/* 配色: #ebe8e1 #dedad2 #92939b #6b6e77 #414452 ------------------------- */
+/* 配色: #ebe8e1 #dedad2 #6b6e77 #595a5c #434446 ------------------------- */
 /* light模式 博客配色 */
 :root {
   --gap: 24px;
@@ -31,13 +31,13 @@
   /* 博客卡片背景颜色 */
   --entry: #F4F4F4;
   /* 网页字体颜色 */
-  --primary: #414452; 
+  --primary: #434446; 
   --secondary: #6b6e77;
   /* tag等背景颜色 */
   --tertiary: #f4f4f4;
   /* post内容字体颜色 */
-  --content: #414452;
-  --hljs-bg: rgb(28, 29, 33);
+  --content: #434446;
+  /* --hljs-bg: rgb(28, 29, 33); */
   /* 代码背景颜色 */
   --code-bg: #ebe8e1;
   /* 边框颜色 */
@@ -72,6 +72,17 @@
   padding: 30px;
   background-color: #f4f4f4;
   border-radius: 3px;
+}
+/* 面包屑导航 */
+.breadcrumbs {
+  font-size: 13px;;
+}
+.breadcrumbs a{
+  /* padding: 5px; */
+  font-size: 14px;
+}
+.breadcrumbs a:hover {
+  color: #434446;
 }
 /* 目录背景颜色 */
 .toc {
@@ -118,12 +129,12 @@
 }
 
 /* dark模式 博客配色 */
-/* #ebe8e1 #dedad2 #595a5c #6b6e77 #434446 */
+/* #ebe8e1 #dedad2  #6b6e77 #595a5c #434446 */
 .dark {
   /* post背景颜色 */
   --theme: #434446;
   /* 博客卡片背景颜色 */
-  --entry: #6b6e77;
+  --entry: #595a5c;
   /* 网页字体颜色 */
   --primary: #ebe8e1;
   --secondary: #dedad2;
@@ -131,33 +142,31 @@
   --tertiary: #595a5c;
   /* post内容字体颜色 */
   --content: #ebe8e1;
-  --hljs-bg: rgb(46, 46, 51);
+  /* --hljs-bg: rgb(46, 46, 51); */
   /* 代码背景颜色 */
-  --code-bg: #595a5c;
+  --code-bg: #6b6e77;
   --border: #595a5c;
 }
 /* 单个博客背景色 */
 .dark .post-single {
-  background-color: #6b6e77;
+  background-color: #595a5c;
 }
 /* 目录背景颜色 */
-.dark .toc {
-  background-color: #6b6e77;
+.dark .toc,
+.dark .post-tags a,
+.dark .paginav {
+  background-color: #595a5c;
 }
 /* footer标签颜色、下一篇博客功能 */
 .dark .post-tags a {
-  background-color: #6b6e77;
   border-color: #434446;
-}
-.dark .paginav {
-  background-color: #6b6e77;
 }
 .dark .post-tags a:hover {
   background-color: #434446;
 }
 .dark .paginav .next:hover,
 .dark .paginav .prev:hover {
-  background-color: #6b6e77;
+  background-color: #595a5c;
 }
 /* ------------------------------------------------------------ */
 
@@ -165,4 +174,9 @@
 .footer .entry-footer .social-icons a{
   /* 去除下划线 */
   border-bottom: none; 
+}
+
+/* 去除角标 */
+sup {
+  display: none;
 }
