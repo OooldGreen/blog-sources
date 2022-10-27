@@ -35,6 +35,7 @@
   </div>
   {{- end }}
 
+  <!-- 挪出tag和nav links -->
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
     <ul class="post-tags">
@@ -49,10 +50,12 @@
     {{- partial "share_icons.html" . -}}
     {{- end }}
   </footer>
-
-  {{- if (.Param "comments") }}
-  {{- partial "comments.html" . }}
-  {{- end }}
+  
 </article>
+
+<!-- 替换了评论的位置 -->
+{{- if (.Param "comments") }}
+{{- partial "comments.html" . }}
+{{- end }}
 
 {{- end }}{{/* end main */}}

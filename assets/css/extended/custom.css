@@ -7,9 +7,17 @@
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6);
 }
+@media screen and (max-width: 415px){
+  .main {
+    padding: 0px;
+  }
+  .post-single {
+    padding: 20px !important;
+  }
+}
 
-/* 博客配色 */
-/* 配色: #dedad2 #92939b #6b6e77 #414452------------------------- */
+/* 配色: #ebe8e1 #dedad2 #92939b #6b6e77 #414452 ------------------------- */
+/* light模式 博客配色 */
 :root {
   --gap: 24px;
   --content-gap: 20px;
@@ -31,12 +39,36 @@
   --content: #414452;
   --hljs-bg: rgb(28, 29, 33);
   /* 代码背景颜色 */
-  --code-bg: rgb(235, 232, 225);
+  --code-bg: #ebe8e1;
   /* 边框颜色 */
   --border: rgb(238, 238, 238);
 }
+
+/* 页面上方home info
+.header_homeinfo {
+  display: block;
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(var(--main-width) + var(--gap) * 6);
+  margin: auto;
+  padding: var(--gap);
+}
+.header_homeinfo article {
+  margin: 24px 0 12px;
+}
+.entry-header a {
+  font-size: 34px;
+  line-height: 1.3;
+  font-weight: bold;
+} */
+
+/* .main {
+  background-color: #f4f4f4;
+} */
+
 /* 单个博客框背景颜色 */
 .post-single {
+  margin-top: 60px;
   padding: 30px;
   background-color: #f4f4f4;
   border-radius: 3px;
@@ -46,16 +78,86 @@
   background-color: #F4F4F4;
   border: none;
 }
+/* 面包屑导航 */
+.breadcrumbs a {
+  color: var(--secondary)
+}
+/* home list卡片背景颜色 */
 .list {
   background-color: #dedad2;
 }
-/* 博客尾部标签颜色、下一篇博客功能 */
-.post-tags a,
+/* 单个post下方footer样式 */
+.post-footer {
+  margin-top: 5px;
+}
+/* footer标签颜色、下一篇博客功能 */
+.post-tags a {
+  background-color: #f4f4f4;
+  border: 1px solid #dedad2;
+}
 .paginav {
+  line-height: 25px;
+  margin: 10px 0;
+  background-color: #f4f4f4;
   border: none;
 }
-.breadcrumbs a {
-  color: var(--secondary)
+.paginav .prev,
+.paginav .next {
+  padding: 0 1px;
+}
+.post-tags a:hover {
+  background-color: #ebe8e1;
+}
+.paginav .next:hover,
+.paginav .prev:hover {
+  background-color: #f4f4f4;
+}
+.paginav .prev span,
+.paginav .next span {
+  color: var(--secondary);
+}
+
+/* dark模式 博客配色 */
+/* #ebe8e1 #dedad2 #595a5c #6b6e77 #434446 */
+.dark {
+  /* post背景颜色 */
+  --theme: #434446;
+  /* 博客卡片背景颜色 */
+  --entry: #6b6e77;
+  /* 网页字体颜色 */
+  --primary: #ebe8e1;
+  --secondary: #dedad2;
+  /* tag等背景颜色 */
+  --tertiary: #595a5c;
+  /* post内容字体颜色 */
+  --content: #ebe8e1;
+  --hljs-bg: rgb(46, 46, 51);
+  /* 代码背景颜色 */
+  --code-bg: #595a5c;
+  --border: #595a5c;
+}
+/* 单个博客背景色 */
+.dark .post-single {
+  background-color: #6b6e77;
+}
+/* 目录背景颜色 */
+.dark .toc {
+  background-color: #6b6e77;
+}
+/* footer标签颜色、下一篇博客功能 */
+.dark .post-tags a {
+  background-color: #6b6e77;
+  border-color: #434446;
+}
+.dark .paginav {
+  background-color: #6b6e77;
+}
+.dark .post-tags a:hover {
+  background-color: #434446;
+}
+.dark .paginav .next:hover,
+.dark .paginav .prev:hover {
+  background-color: #6b6e77;
 }
 /* ------------------------------------------------------------ */
 

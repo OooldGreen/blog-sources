@@ -17,7 +17,7 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Snow Cabin
+  title: Shirley's Cabin
   description: "Records for frontend learning and daily life."
   keywords: [Blog, Portfolio, PaperMod, Hugo, Frontend, CS]
   author: Shirley
@@ -57,7 +57,7 @@ params:
 
   label:
     text: "SNOW CABIN"
-    icon: "/favicon.ico"
+    icon: "/snowman.png"
     iconHeight: 35
 
   # profile-mode
@@ -77,7 +77,7 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Shirley \U0001F44B"
+    Title: "Home"
     Content: Welcome to Shirley's cabin!
 
   # 社交链接
