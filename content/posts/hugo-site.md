@@ -180,6 +180,7 @@ VALUE: 0.83.0
 
 # Hugo主题相关
 `PaperMod's`百科：<https://github.com/adityatelange/hugo-PaperMod/wiki#welcome-to-the-papermods-wiki>
+
 `Jane Theme Preview: `<https://www.xianmin.org/hugo-theme-jane/post/jane-theme-preview/#>
 
 ## highlight.js
