@@ -178,11 +178,14 @@ VALUE: 0.83.0
 ```
 重新编译就可以了。
 
-# PaperMod相关
+# Hugo主题相关
 `PaperMod's`百科：<https://github.com/adityatelange/hugo-PaperMod/wiki#welcome-to-the-papermods-wiki>
-
-# Jane相关
 `Jane Theme Preview: `<https://www.xianmin.org/hugo-theme-jane/post/jane-theme-preview/#>
+
+## highlight.js
+从`higlight`换成`chroma`（被官方文档蛊惑），又换回`highlight`，原因是看到`chroma`很多代码都没有高亮显示，强迫症实在难受，`highlight`怎么配置也没完全弄明白，用了`cheat`的方法把`css`样式表换了，还自定义了几个看不顺眼的高亮颜色。主题颜色也差不多是DIY，有看不顺眼的以后再改吧。
+
+`highlight.js`样式预览：<https://highlightjs.org/static/demo/>
 
 常用配置：<https://sixdian.com/post/jane-theme-config/>
 
