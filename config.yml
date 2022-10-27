@@ -151,13 +151,3 @@ markup:
     guessSyntax: true
     lineNos: true
     style: monokai
-
-    # -------chroma配置-------
-    # 代码行数下方是否有横线
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # # 代码行数标识
-    # lineNos: true
-    # # noClasses: false
-    # style: monokai
