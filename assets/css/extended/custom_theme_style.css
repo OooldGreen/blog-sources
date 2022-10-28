@@ -1,0 +1,168 @@
+/* 
+  主题样式，明亮模式和黑暗模式博客配色设置
+*/
+
+
+/* 配色: #ebe8e1 #dedad2 #6b6e77 #595a5c #434446 ------------------------- */
+/* light模式 博客配色 */
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 3px;
+  /* post背景颜色 */
+  --theme:  #dedad2;
+  /* 博客卡片背景颜色 */
+  --entry: #F4F4F4;
+  /* 网页字体颜色 */
+  --primary: #434446; 
+  --secondary: #6b6e77;
+  /* tag等背景颜色 */
+  --tertiary: #f4f4f4;
+  /* post内容字体颜色 */
+  --content: #434446;
+  /* --hljs-bg: rgb(28, 29, 33); */
+  /* 代码背景颜色 */
+  --code-bg: #ebe8e1;
+  /* 边框颜色 */
+  --border: rgb(238, 238, 238);
+}
+
+/* 页面上方home info
+.header_homeinfo {
+  display: block;
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(var(--main-width) + var(--gap) * 6);
+  margin: auto;
+  padding: var(--gap);
+}
+.header_homeinfo article {
+  margin: 24px 0 12px;
+}
+.entry-header a {
+  font-size: 34px;
+  line-height: 1.3;
+  font-weight: bold;
+} */
+
+/* .main {
+  background-color: #f4f4f4;
+} */
+
+/* 单个博客框背景颜色 */
+.post-single {
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+/* 面包屑导航 */
+.breadcrumbs {
+  font-size: 13px;;
+}
+.breadcrumbs a{
+  /* padding: 5px; */
+  font-size: 14px;
+}
+.breadcrumbs a:hover {
+  color: #434446;
+}
+/* 目录背景颜色 */
+.toc {
+  background-color: #F4F4F4;
+  border: none;
+}
+/* 面包屑导航 */
+.breadcrumbs a {
+  color: var(--secondary)
+}
+/* home list卡片背景颜色 */
+.list {
+  background-color: #dedad2;
+}
+/* 单个post下方footer样式 */
+.post-footer {
+  margin-top: 5px;
+}
+/* footer标签颜色、下一篇博客功能 */
+.post-tags a {
+  background-color: #f4f4f4;
+  border: 1px solid #dedad2;
+}
+.paginav {
+  line-height: 25px;
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  border: none;
+}
+.paginav .prev,
+.paginav .next {
+  padding: 0 1px;
+}
+.post-tags a:hover {
+  background-color: #ebe8e1;
+}
+.paginav .next:hover,
+.paginav .prev:hover {
+  background-color: #f4f4f4;
+}
+.paginav .prev span,
+.paginav .next span {
+  color: var(--secondary);
+}
+/* archive鼠标点击响应 */
+.archive-entry:hover {
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+/* ----------------------------------------------- */
+/* dark模式 博客配色 */
+/* #ebe8e1 #dedad2  #6b6e77 #595a5c #434446 */
+.dark {
+  /* post背景颜色 */
+  --theme: #434446;
+  /* 博客卡片背景颜色 */
+  --entry: #595a5c;
+  /* 网页字体颜色 */
+  --primary: #ebe8e1;
+  --secondary: #dedad2;
+  /* tag等背景颜色 */
+  --tertiary: #595a5c;
+  /* post内容字体颜色 */
+  --content: #ebe8e1;
+  /* --hljs-bg: rgb(46, 46, 51); */
+  /* 代码背景颜色 */
+  --code-bg: #6b6e77;
+  --border: #595a5c;
+}
+/* 单个博客背景色 */
+.dark .post-single {
+  background-color: #595a5c;
+}
+/* 目录背景颜色 */
+.dark .toc,
+.dark .post-tags a,
+.dark .paginav {
+  background-color: #595a5c;
+}
+/* footer标签颜色、下一篇博客功能 */
+.dark .post-tags a {
+  border-color: #434446;
+}
+.dark .post-tags a:hover {
+  background-color: #434446;
+}
+.dark .paginav .next:hover,
+.dark .paginav .prev:hover {
+  background-color: #595a5c;
+}
+/* archive鼠标点击响应 */
+.dark .archive-entry:hover {
+  background-color: #595a5c;
+  border-radius: 3px;
+}
+/* ------------------------------------------------------------ */

@@ -55,9 +55,10 @@
 {{- $license_css := (resources.Get "css/core/license.css") }}
 {{- $common := (resources.Match "css/common/*.css") | resources.Concat "assets/css/common.css" }}
 
+{{- /* 此处我修改了highlight模块的名字，用于自定义代码高亮，在extend_head中修改会有错误 */}}
 {{- /* include `an-old-hope` if hljs is on */}}
 {{- $isHLJSdisabled := (site.Params.assets.disableHLJS | default false) }}
-{{- $hljs := (cond ($isHLJSdisabled) (".chroma { background-color: unset !important;}" | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/an-old-hope.min.css")) }}
+{{- $hljs := (cond ($isHLJSdisabled) (".chroma { background-color: unset !important;}" | resources.FromString "assets/css/hljs-blank.css") (resources.Get "css/hljs/hljs.css")) }}
 
 {{- /* order is important */}}
 {{- $core := (slice $theme_vars $reset $common $hljs $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
@@ -159,7 +160,7 @@
     {{- end }}
 </noscript>
 
-<!-- {{- partial "extend_head.html" . -}} -->
+{{- partial "extend_head.html" . -}}
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
