@@ -1,6 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+date: {{ .Date }} 
+lastmod: {{ .Date }} 
 draft: true
 
 keywords: [""]
@@ -12,16 +13,15 @@ author: ""
 hidemeta: false
 comments: true
 # canonicalURL: "https://canonical.url/to/page"
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: false
+# disableShare: false
+# disableHLJS: false
+# hideSummary: false
+# searchHidden: false
+# ShowReadingTime: true
+# ShowBreadCrumbs: true
+# ShowPostNavLinks: true
+# ShowWordCount: true
+# ShowRssButtonInSectionTermList: true
 ---
 
 <!--more-->
