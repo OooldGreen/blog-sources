@@ -1,12 +1,12 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Interview Practice"
+date: 2022-10-30T10:35:16+08:00
 draft: true
 
-keywords: [""]
+keywords: ["interview"]
 description: ""
-tags: [""]
-categories: [""]
+tags: ["interview"]
+categories: ["frontend"]
 author: ""
 
 hidemeta: false
@@ -24,4 +24,19 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: false
 ---
 
+方便反复诵读复习
 <!--more-->
+
+# 计算机原理
+
+
+# JS
+
+
+
+
+# HTML
+
+
+
+# CSS

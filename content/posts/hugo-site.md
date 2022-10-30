@@ -92,12 +92,12 @@ hugo new post/my-first-post.md
 > 
 >  名字一定要加后缀！起名字最好就是英文小写+短横线～
 
+
 # 部署
 
 ## 部署到Github
 
 ### 先有一个Github账号
-
 
 1. 进入[github](https://github.com/)（此处可能需要🪜）
 2. 输入邮箱，点击`Sign up for GitHub`创建账号

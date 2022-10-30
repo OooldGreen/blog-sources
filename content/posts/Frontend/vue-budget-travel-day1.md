@@ -1,5 +1,5 @@
 ---
-title: "Budget Travel项目记录 Day1"
+title: "Budget Travel 项目记录 Day1"
 date: 2022-10-19T20:54:07+08:00
 lastmod: 2022-10-19T20:54:07+08:00
 draft: false
@@ -72,8 +72,8 @@ router.beforeEach((to, from, next) => {
   }
 })
 ```
+# 写根目录页面
 
-# 写登录页面
 ## 引入element-ui
 ### 全局引入
 在`main.js`中写入以下代码
@@ -111,27 +111,131 @@ module.exports = {
   ]
 }
 ```
-接着开始部分引入。可以单独写一个`element.js`来做引入，引入单独的组件，例如登录界面所需的表单组件和按钮。
+接着开始部分引入。可以单独写一个`element.js`来做引入，引入单独的组件，例如home页面写了一个菜单栏和登录按钮，引入如下。以后需要什么组件也都要引入。
 ```js
 // element.js
 import Vue from 'vue'
 import {
   Button,
-  Form,
-  FormItem,
-  Input,
+  Menu,
+  MenuItem
 } from 'element-ui'
 
 Vue.use(Button)
-Vue.use(Form)
-Vue.use(FormItem)
-Vue.use(Input)
+Vue.use(Menu)
+Vue.use(MenuItem)
 ```
 最后在`main.js`中引入`element.js`文件。
 ```js
 // main.js
 import './plugins/element'
 ```
+
+## 菜单栏
+把`myMenu`作为布局`layout.vue`的一个组件，在`myMenu.vue`中用`el-menu`做菜单栏。
+
+- 菜单栏页面内容
+  ```vue
+  <!-- myMenu.vue -->
+  <template>
+  <!-- 导航栏 -->
+    <div class="nav">
+      <el-menu
+        :default-active="$route.path"
+        class="el-menu-demo"
+        mode="horizontal"
+        @select="selectMenu"
+      >
+        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/news">新闻</el-menu-item>
+        <el-menu-item index="/about">我的</el-menu-item>
+        <el-menu-item index="/travel">旅游</el-menu-item>
+    </div>
+  </template>
+  ```
+
+- 在布局组件中引入
+  ```vue
+  <!-- layout.vue -->
+  <template>
+    <div>
+      <myMenu/>
+    </div>
+  </template>
+
+  <script>
+  import myMenu from '../components/MyMenu.vue'
+  export default {
+    components: { myMenu }
+  }
+  </script>
+  ```
+
+- 登录按钮（需要先写好登录页面）
+  描述：点击页面右上角登录按钮跳转登录页面，登录成功跳回首页，右上角按钮显示退出登录。
+  ```vue
+  <template>
+    <div>
+      <!-- 导航右侧内容 -->
+        <div class="nav-right">
+          <!-- 没登录显示登录按钮，已登录显示退出登录template -->
+          <el-button v-if="!userInfo.username" size="small" @click="login">登录</el-button>
+        </div>
+      </el-menu>
+    </div>
+  </template>
+
+
+  <script>
+  export default {
+    methods: {
+      login() {
+          this.$router.push('/login')
+      }
+    }
+  };
+  </script>
+  ```
+
+- 登出按钮
+  描述：点击退出登录清空vuex中和存储在本地的用户信息，跳回首页。
+  
+  ```vue
+  <template>
+    <div>
+      <!-- 导航右侧内容 -->
+        <div class="nav-right">
+          <!-- 没登录显示登录按钮，已登录显示退出登录template -->
+          <template v-else>
+              <span>欢迎你，"{{userInfo.username}}"</span>
+              <el-button size="small" @click="logout">退出登录</el-button>
+          </template>
+        </div>
+      </el-menu>
+    </div>
+  </template>
+
+  <script>
+  import { mapState, mapMutations } from 'vuex'
+  export default {
+    methods: {
+      ...mapMutations('loginModule', ['clearUser']),
+      logout() {
+          // 清空vuex和本地用户数据
+          this.clearUser(),
+          localStorage.removeItem('userInfo')
+          // 跳转路由
+          this.$router.push('/')
+      }
+    },
+    computed: {
+      ...mapState('loginModule', ['userInfo'])
+    }
+  };
+  </script>
+  ```
+
+# 写登录页面
 
 ## 创建一个简易的登录接口
 第一步：安装`express`和`jwt`
@@ -255,3 +359,15 @@ localStorage.setItem('userInfo', JSON.stringify(obj)) //对象需要转化成字
 改成`vue2`对应的`vuex3`： `npm install vuex@3`
 
 然后babel报错：`npm install @babel/core @babel/preset-env`
+
+## 报错`Uncaught (in promise) NavigationDuplicated`
+发现是vue-router跳转到自己的时候会报错，查看我的vue-router版本已经是`3.5.1`，所以没有按网上说的装`3.0`版本，最后解决方法是在`main.js`中加入以下代码
+```js
+import Router from 'vue-router'
+Vue.use(Router)
+
+const originalPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+```
