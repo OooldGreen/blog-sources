@@ -12,7 +12,7 @@
   --main-width: 720px;
   --header-height: 60px;
   --footer-height: 60px;
-  --radius: 3px;
+  --radius: 0px;
   /* post背景颜色 */
   --theme:  #dedad2;
   /* 博客卡片背景颜色 */
@@ -117,7 +117,7 @@
 /* archive鼠标点击响应 */
 .archive-entry:hover {
   background-color: #f4f4f4;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 /* ----------------------------------------------- */
 /* dark模式 博客配色 */
@@ -163,6 +163,9 @@
 /* archive鼠标点击响应 */
 .dark .archive-entry:hover {
   background-color: #595a5c;
-  border-radius: 3px;
+  border-radius: 0px;
+}
+.dark .breadcrumbs a:hover {
+  color: var(--primary);
 }
 /* ------------------------------------------------------------ */

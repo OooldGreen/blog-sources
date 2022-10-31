@@ -124,12 +124,12 @@ UseHugoToc: false
 大致分为协商缓存和强缓存。
 
 ### 强缓存
-#### Cache-Control：
+Cache-Control：
 - 设置 max-age，设定时间内可以直接从本地缓存中读取文件并加载
 - public/private，设置缓存能否在用户间共享
 - no-cache， 不进行缓存
 
-#### Expires：
+Expires：
 设置页面过期的时间，过期时间内可以直接读取缓存
 
 ### 协商缓存
@@ -723,7 +723,7 @@ document.addEventListener('scroll', better_scroll)
 ## 3.5 BFC
 块级格式化上下文，是一块独立渲染的区域，内部元素的渲染不会影响外部的元素。BFC 布局会把盒子在垂直方向上一个一个排列，盒子之间的距离由 margin 决定，两个相邻盒子的 margin 会互相重叠。BFC 区域不会与 float box 重叠，计算高度时，浮动盒子也参与计算。
 
-### 触发 BFC
+触发 BFC
 - 根元素 html
 - display 为 inline-block，table-cell, table-caption
 - position 为 fixed 或 absolute
@@ -1117,3 +1117,7 @@ Diff算法用来找出虚拟DOM中被改变的部分，然后针对原生DOM进�
 ## 4.12 v-if 和 v-show
 - v-if 一开始不渲染，不在 DOM 树中，节点要显示出来才开始渲染，渲染一次消耗很大
 - v-show 一开始渲染好了只是不显示，适用于隐藏显示操作频繁的情况
+
+# 5. Webpack
+
+# 6. 数据库
