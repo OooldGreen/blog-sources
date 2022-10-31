@@ -672,58 +672,448 @@ document.addEventListener('scroll', better_scroll)
 
 # 3. HTML 和 CSS
 ## 3.1 HTML5新特性
+### 增加的特性
+- canvas
+- video 和 audio
+- localStorage 和 sessionStorage
+- 语义化更好的元素内容，如 article, footer, header, nav, svg, figure, menu
+- 新的技术 webworker websocket
+
+### 移除的元素
+- 纯表现的元素，例如 big，basefont，s，u
+- 对可用性产生负面影响，例如 frame，noframes
 
 ## 3.2 HTML 语意化
+- 结构清晰，利于 SEO
+- 便于维护
+- 没有 css 也能看懂
+- 便于对浏览器、搜索引擎解析
 
 ## 3.3 HTML 中 title 属性和 alt 属性的区别
+- title 是图片加载后的标题，鼠标放上去后会显示
+- alt 是图片没有加载出来时候显示的内容
 
-## 3.4 回流和重绘
+## 3.4 重绘和重排
+### 重绘 (repaint)
+部分重新绘制，style 修改。重绘不一定发生重排。
+
+触发场景：
+- color 修改
+- text-align 修改
+- a:hover 修改
+
+### 重排/回流 (reflow)
+重新排版布局，涉及 DOM 的排版布局问题，性能损耗更多。重排必定发生重绘。
+
+触发场景：
+- 盒子长宽的改变
+- 动画，伪类等引起的元素表面改动
+- display: none
+- scroll、resize 页面
+- background 的修改
+- appendChild 等 DOM 元素操作
+- 读取元素的属性，如 offsetLeft、offsetTop、scrollTop/Left/...
+
+### 如何避免重绘重排
+- 通过改变 class 批量改变 style，同时尽可能减少受影响的 DOM
+- 使用 absolute 或 fixed 脱离文档流
+- GPU 加速，开启之后的元素会被独立出来，不再影响其他布局
+- 避免用 table 进行布局
 
 ## 3.5 BFC
+块级格式化上下文，是一块独立渲染的区域，内部元素的渲染不会影响外部的元素。BFC 布局会把盒子在垂直方向上一个一个排列，盒子之间的距离由 margin 决定，两个相邻盒子的 margin 会互相重叠。BFC 区域不会与 float box 重叠，计算高度时，浮动盒子也参与计算。
+
+### 触发 BFC
+- 根元素 html
+- display 为 inline-block，table-cell, table-caption
+- position 为 fixed 或 absolute
+- float 不为 none
+- oveflow 不为 visible
 
 ## 3.6 CSS3新特性
+- border-radius，box-shadow
+- 文本效果 text-shadow、font-family、font-weight、font-style
+- 多背景 rgba
+- 动画 @keyframes
+- 线性渐变
+- 新增伪类
 
 ## 3.7 盒子模型
+- 标准盒模型：`box-sizing: content-box`，设置的宽高只表示内容的宽高，不包含 padding 和 border
+- 怪异盒模型：`box-sizing: border-box`，设置的宽高就是整个盒子的大小，包含 padding 和 border
 
-## 3.8 垂直居中
+## 3.8 水平垂直居中
+1. 绝对定位
+    ```css
+    .item{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -75px;  /* 设置margin-left / margin-top 为自身高度的一半 */
+        margin-left: -75px;
+    }
+    ```
+2. transform
+    ```css
+    .item{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  /* 使用 css3 的 transform 来实现 */
+    }
+    ```
+3. flex 布局
+    ```css
+    .parent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ```
+4. grid 布局
+    ```css
+    .parent {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+     }
+    ```
+5. table-cell 布局
+    ```css
+    .parent {
+    display: table-cell;
+    text-align: center;
+    vertical-align:center;
+    }
+    .item {
+    display: inline-block;
+    }
+    ```
 
 ## 3.9 画一个三角形
+盒子宽高都设为 0，只设置 border，三条边都设置 transparent，只留一条边有颜色
+
+```css
+#demo {
+ width: 0;
+ height: 0;
+ border-width: 20px;
+ border-style: solid;
+ border-color: transparent transparent red transparent;
+}
+```
 
 ## 3.10 三栏布局
+三栏布局的要求是两边宽度固定，中间的盒子自适应布局，高度随内容撑起。
+
+### 圣杯布局
+三个盒子放在一个父元素节点中，设置父盒子 padding 为左右两栏的宽度且 `overflow: hidden`，三个盒子设置左浮动 `float: left`。中间盒子宽度设置 100%，两栏宽度设好，左栏 margin 设置 -100% 且右移一个自身宽度，右栏 margin 设置 -自身宽度，且左移一个自身宽度。
+
+好处是不用添加 DOM 节点，但是 middle 部分小于 left 部分时布局会破碎。
+
+```html
+<style>
+    .parent {
+        padding: 0 200px;
+        overflow: hidden;
+    }
+    .column {
+        float: left;
+        position: relative;
+        height: 200px;
+    }
+    .middle {
+        width: 100%;
+        background-color: pink;
+    }
+    .left {
+        width: 200px;
+        background-color: #eee;
+        margin-left: -100%;
+        left: -200px;
+    }
+    .right {
+        width: 200px;
+        background-color: #eee;
+        margin-left: -200px;
+        left: 200px;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="middle column">middle</div>
+        <div class="left column">left</div>
+        <div class="right column">right</div>
+    </div>
+</body>
+```
+
+### 双飞翼布局
+中间盒子外面需要再包一层盒子，将外面这层盒子设置 margin 为左右两栏的宽度，三个盒子设置浮动，中间盒子宽度 100%，两边盒子宽度设置好之后，左边盒子设置 margin-left 为 100%，右边盒子设置 margin-left 为 -自身宽度，最后父盒子清除浮动。
+
+好处是稳定，代码简洁，缺点是多加了 DOM 节点。
+
+```html
+<style>
+    .container {
+        overflow: hidden;
+    }
+    .content, .left, .right {
+        float: left;
+        height: 200px;
+    }
+    .content {
+        width: 100%;
+    }
+    .center {
+        margin: 0 200px;
+        background-color: pink;
+        height: 200px;
+    }
+    .left {
+        width: 200px;
+        margin-left: -100%;
+        background-color: #eee;
+    }
+    .right {
+        width: 200px;
+        margin-left: -200px;
+        background-color: #eee;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="center">center</div>
+        </div>
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+```
 
 ## 3.11 link 和 @import 的区别
+- link 属于 XHTML 标签，除了加载 CSS 外，还能用于定义 RSS(是一种描述和同步网站内容的格式，是使用最广泛的 XML 应用), 定义 rel 连接属性等作用
+- 而 @import 是 CSS 提供的，只能用于加载 CSS
+- 页面被加载的时，link 会同时被加载，而 @import 引用的 CSS 会等到页面被加载完再加载
+- import 是 CSS2.1 提出的，只在 IE5 以上才能被识别，而 link 是 XHTML 标签，无兼容问题
+总之，link 要优于 @import。
 
 ## 3.12 雪碧图
+将一个页面设计到的图片包含道一张图片里去，然后通过定位的方法选取合适的图片。
+
+这样做的好处是：
+- 可以一次请求完所有图片，不用发很多请求，加快了速度，提升了页面性能
+- 减少图片的字节，放在一起比单独的图片字节数更小
+- 更换风格方便，只需要更换这张雪碧图所有的图标风格都可以改变
+
+缺点是：
+- 切图很麻烦，还可能造成背景断裂
+- 开发和维护都比较麻烦，一个图标元素的位置移动可能导致所有图标位置都要移动
 
 ## 3.13 伪类和伪元素
+根本不同在于是否创建了新的 DOM 元素
+- 伪类操作文档中已有的元素
+- 伪元素创建新的元素进行操作
 
-## 3.14 flex布局
+## 3.14 [flex布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
+容器的属性
+- flex: wrap 决定如何换行，nowrap | wrap | wrap-reverse
+- flex: direction 决定主轴的方向，row | row-reverse | column | column-reverse
+- justify-content 决定主轴上的对齐方式
+- align-items 决定交叉轴上的对齐方式
+
+项目的属性
+- grow：存在剩余空间时的放大倍数
+- shrink：空间不足时的缩小比例
+- basis：分配多余空间之前，主轴占据的空间
+- flex: 1 包含了三个元素：grow, shrink, basis，默认值为 0 1 auto
+    ```css
+    .item {
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    }
+    ```
 
 ## 3.15 rem 和 em
+- rem 是根据根节点的字体大小比例调整
+- em 是根据父节点的字体大小进行比例调整
+
+rem 经常被用于移动端响应式的布局，原理是通过 媒体查询 或 flexible.js，在屏幕尺寸发生变化时，改变 html 元素的字体大小。也可以和 vw、vh 配合使用，用 vw 设置 html 根元素字体大小，当窗口大小改变时实现自适应改变字体大小。
 
 ## 3.16 清除浮动
+- 结尾插入空标签或 br，添加 `clear: both`
+- 父级盒子定义 `overflow: hidden`
+- 父级盒子 `display: table`
+- after 伪元素清除浮动
+    ```css
+    .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+    /* IE6、7 专有 */
+    .clearfix {
+    *zoom: 1;
+    }
+    ```
+- before 和 after 双伪元素清除浮动
+    ```css
+    .clearfix:before,
+    .clearfix:after {
+    content: "";
+    display: table;
+    }
+
+    .clearfix:after {
+    clear: both;
+    }
+
+    .clearfix {
+    *zoom: 1;
+    }
+    ```
 
 ## 3.17 元素消失
+- visibility: hidden
+- opacity: 0
+- display: none
+
+前两个元素存在但不显示，后面这个元素不渲染，不保留位置
 
 ## 3.18 position
+属性值有 static | relative | fixed | absolute | sticky | inherit
+
+static 和 relative 不脱离文档流，relative 用于定位偏移的位置也作为空间保留
+
+fixed 和 absolute 脱离文档流，absolute 用于定位父元素不受影响，fixed 是相对于浏览器窗口进行定位
 
 # 4. Vue
 ## 4.1 MVC 和 MVVM
+### MVC
+在 Controller 中响应用户对 View 的事件，Controller 调用 Model 的接口对数据进行操作，一旦 Model 发生变化 Model 就通知相关视图进行更新
+
+- Model：数据和数据的处理方法
+- View：视图，负责对数据的展示
+- Controller：定义界面对用户输入的响应方式，连接模型和视图，用于控制应用程序的流程，处理用户的行为和数据上的改变
+
+### MVVM
+mvvm 把 view 和 model 的同步逻辑自动化，只需要告诉 view 的显示内容与 model 哪一部分对应即可。采用双向绑定。
+
+- Model：数据和数据的处理方法
+- View：视图，负责对数据的展示
+- ViewModel：View 的变动，自动反映在 ViewModel
 
 ## 4.2 生命周期
+Vue 有完整的生命周期，创建 -> 挂载 -> 更新 -> 销毁
+- beforeCreated
+    开始创建数据，只有默认的生命周期钩子和默认事件，data和methods还没有初始化
+- Created
+    data 有了，可以访问数据和方法，但没有挂载到 DOM，可以操作数据
+- beforeMount
+    挂载之前，编译好了，但还没有挂载到页面上
+- Mounted
+    到此创建完成了，可以进行 DOM 操作了
+- beforeUpdate
+    data 中数据已经更新了，但还没有更新到页面上，页面上还是旧的数据
+- Updated
+    页面上的数据被更新了，页面和 data 中数据一致了
+- beforeDestroy
+    销毁之前，适合销毁定时器等
+- Destroyed
+    所有的数据、方法、过滤器、指令都不可用了，组件已经被销毁了
 
 ## 4.3 双向绑定
+### Object.defineProperty
+Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 getter 和 setter，组件的 data 发生变化时，将变化发布给订阅者，订阅者收到消息后进行处理
+
+缺点：
+- 无法监听数组的变化，必须使用数组的方法
+- 无法对新增加或删除的属性进行监听，需要使用 Vue.set()
+
+### Proxy
+使用 ES6 提供的 Proxy 进行数据拦截，劫持整个对象，然后返回一个新对象
+
+解决无法监听新增属性或删除属性的响应式问题、解决无法监听数组长度和index变化问题。
 
 ## 4.4 Vue3新特性
+- proxy 代替 Object.defineProperty
+- 优化 diff 算法
+- 生命周期不同了
+- Vue3 使用组合式 API
+- 支持 TS
 
 ## 4.5 路由
+### history
+美观但兼容性略差，部署上线可能会出现 404 问题
+
+解决方法：使用 node 的 connect-history 中间件
+
+### hash
+哈希模式 # 后面的路径不发送给服务器，不太美观，但兼容性好，有可能被 APP 标记为不合法
 
 ## 4.6 路由守卫
+作用：保护路由的安全，权限问题
+
+### 全局路由守卫
+分为`beforeEach、beforeResolve、afterEach`
+
+使用：全局前置路由守卫`beforeEach`：权限校验
+
+### 独享路由守卫
+只有前置守卫`beforeEnter`，是在路由配置页面单独给路由配置的一个守卫
+
+使用：不同的路由重用守卫，`beforeEnter` 守卫只在进入路由时触发
+
+### 组件内路由守卫
+分为进入守卫和离开守卫`beforeRouteEnter`、`beforeRouteLeave`、`beforeRouteUpdate`
+
+使用：
+ - `beforeRouteLeave`：离开页面时弹出提示窗口，清除当前组件中的定时器等；关闭页面时, 将公用信息保存到session或Vuex中；当前页面中有未关闭的窗口或未保存的内容阻止页面跳转
+  - `beforeRouteUpdate`：动态路由跳转
 
 ## 4.7 Vuex
+用于集中式管理数据，一般用于大中型应用
+
+- state：记录数据状态
+- getters：获取数据，可以根据state中的数据进行过滤派生出一些新的数据
+- action：进行异步操作
+- mutations：唯一可以改变 state 中数据的方法
+- module：如果数据较多可以分模块
 
 ## 4.8 nextTick
+Vue在更新数据时是异步执行的，data 中数据更新了但页面还没来得及更新，所以如果立刻获取 DOM，获取到的是还没有更新的 DOM，nextTick 就是等数据更新之后再进行 DOM 操作。本质是返回一个 Promise
 
 ## 4.9 Diff算法
+Diff算法用来找出虚拟DOM中被改变的部分，然后针对原生DOM进行渲染，不用改变所有节点重新渲染整个页面
+
+比较方式
+- 同层比较：两个树的完全的 diff 算法是一个时间复杂度为 O(n^3) 的问题。但是在前端当中，你很少会跨越层级地移动 DOM 元素。所以 Virtual DOM 只会对同一个层级的元素进行对比，这样算法复杂度就可以达到 O(n)。
+- 深度优先：在实际的代码中，会对新旧两棵树进行一个深度优先的遍历，这样每个节点都会有一个唯一的标记。在深度优先遍历的时候，每遍历到一个节点就把该节点和新的的树进行对比。如果有差异的话就记录到一个对象里面。
 
 ## 4.10 组件间通信
+- 父传子：props
+- 子传父：$emit, $on
+- 任意组件间
+    - vuex
+    - eventbus：使用方法是创建一个新的Vue实例，需要通信的组件都引入该Vue实例，传递数据的组件使用` event.$emit('名称',参数)`发送数据，接收数据的组件使用 `event.$on('名称',方法)`接收数据
+    - 订阅发布模式
+
+## 4.11 keep-alive
+用`<keep-alive>`标签对需要缓存的组件进行包裹，保存内存中组件的状态，进行缓存，防止重新加载 DOM，减少加载时间，提高性能。
+
+多了两个生命周期：activated、deactivated，分别在进入和退出时触发。
+
+属性：
+- include：缓存包含哪些组件
+- exclude：缓存不包含哪些组件
+- max：最多保存的组件数
+
+## 4.12 v-if 和 v-show
+- v-if 一开始不渲染，不在 DOM 树中，节点要显示出来才开始渲染，渲染一次消耗很大
+- v-show 一开始渲染好了只是不显示，适用于隐藏显示操作频繁的情况
