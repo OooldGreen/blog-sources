@@ -18,12 +18,12 @@ pre, code {
 h1, h2, h3 {
   font-weight: 260;
 }
-h4, h5, h6, p, li {
+h4, h5, h6, p, li, a {
   font-weight: 250;
 }
 .active,
 .post-content figure>figcaption {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 /* 设置字体自适应大小 */
