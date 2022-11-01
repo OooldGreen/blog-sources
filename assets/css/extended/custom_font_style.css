@@ -16,25 +16,28 @@ pre, code {
   font-family: 'FreeMono', monospace;
 }
 h1, h2, h3 {
+  font-weight: 260;
+}
+h4, h5, h6, p {
   font-weight: 250;
 }
 
-
 /* 设置字体自适应大小 */
 @media screen and (max-width: 415px) {
-  html {
-    font-size: 12px;
-  }
-  body {
+  html,
+  .toc li {
     font-size: 14px;
+  }
+  body, h4, h5, h6, p {
+    font-size: 16px !important;
   }
 }
 .post-title, .post-content h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .post-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .post-content h3 {
@@ -42,13 +45,13 @@ h1, h2, h3 {
 }
 
 .post-content h4 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .post-content h5 {
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .post-content h6 {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
