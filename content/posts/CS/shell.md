@@ -10,8 +10,8 @@ tags: ["bash"]
 categories: ["CS"]
 author: ""
 
-hidemeta: false
-comments: true
+# hidemeta: false
+# comments: true
 # canonicalURL: "https://canonical.url/to/page"
 # disableShare: false
 # disableHLJS: false

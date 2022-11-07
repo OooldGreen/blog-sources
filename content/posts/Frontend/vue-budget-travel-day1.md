@@ -3,30 +3,30 @@ title: "Budget Travel 项目记录 Day1"
 date: 2022-10-19T20:54:07+08:00
 lastmod: 2022-10-19T20:54:07+08:00
 draft: false
-keywords: ["vue", "项目记录", "element-ui"]
+keywords: ["Vue", "项目记录", "element-ui"]
 description: ""
-tags: ["vue", "项目记录"]
-categories: ["vue","项目记录"]
+tags: ["Vue", "项目记录"]
+categories: ["Frontend"]
 author: ""
 
-showToc: true
-TocOpen: true
-draft: false
-hidemeta: false
-comments: true
-description: ""
+# showToc: true
+# TocOpen: true
+# draft: false
+# hidemeta: false
+# comments: true
+# description: ""
 # canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: false
+# disableHLJS: true # to disable highlightjs
+# disableShare: false
+# disableHLJS: false
+# hideSummary: false
+# searchHidden: true
+# ShowReadingTime: true
+# ShowBreadCrumbs: true
+# ShowPostNavLinks: true
+# ShowWordCount: true
+# ShowRssButtonInSectionTermList: true
+# UseHugoToc: false
 ---
 穷游小项目跟练第一天。
 <!--more-->

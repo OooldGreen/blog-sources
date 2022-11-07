@@ -6,8 +6,8 @@ draft: false
 keywords: ["Angean blue", "地中海菜系"]
 description: ""
 tags: ["Blog", "好吃好喝"]
-categories: ["Daily"]
-author: "Shirley.C"
+categories: ["Daily", "Blog"]
+# author: "Shirley.C"
 
 # Uncomment to pin article to front page
 # weight: 1

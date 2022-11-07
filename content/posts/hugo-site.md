@@ -3,30 +3,30 @@ title: "关于配置博客"
 date: 2022-10-17T10:11:51+08:00
 lastmod: 2022-10-18T10:11:51+08:00
 draft: false
-keywords: ["Hugo", "jane"]
+keywords: ["Hugo", "blog site"]
 description: ""
-tags: ["Jane", "blog", "域名", "markdown"]
+tags: ["blog", "域名", "markdown"]
 categories: ["Blog"]
 author: ""
 
-showToc: true
-TocOpen: true
-draft: false
-hidemeta: false
-comments: true
-description: ""
-# canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: false
+# showToc: true
+# TocOpen: true
+# draft: false
+# hidemeta: false
+# comments: true
+# description: ""
+# # canonicalURL: "https://canonical.url/to/page"
+# disableHLJS: true # to disable highlightjs
+# disableShare: false
+# disableHLJS: false
+# hideSummary: false
+# searchHidden: true
+# ShowReadingTime: true
+# ShowBreadCrumbs: true
+# ShowPostNavLinks: true
+# ShowWordCount: true
+# ShowRssButtonInSectionTermList: true
+# UseHugoToc: false
 ---
 
 从小到大都对属于自己的东西格外着迷，可能是骨子里的控制欲作祟吧，于是突发奇想地想要拥有属于自己的博客。

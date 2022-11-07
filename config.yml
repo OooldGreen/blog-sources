@@ -27,12 +27,12 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
-  ShowReadingTime: true  # 阅读时间
-  ShowShareButtons: false # 分享按钮
+  ShowReadingTime: false  # 阅读时间
+  ShowShareButtons: true # 分享按钮
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true # 复制代码按钮
-  ShowWordCount: true # 博客字数
+  ShowWordCount: false # 博客字数
   ShowRssButtonInSectionTermList: true
   UseHugoToc: false
   disableSpecial1stPost: false

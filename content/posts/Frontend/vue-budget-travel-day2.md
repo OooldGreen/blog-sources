@@ -3,28 +3,28 @@ title: "Budget Travel 项目记录 Day2"
 date: 2022-10-29
 lastmod: 2022-10-29
 draft: false
-keywords: ["vue", "项目记录", "element-ui"]
+keywords: ["Vue", "项目记录", "element-ui"]
 description: ""
-tags: ["vue", "项目记录"]
-categories: ["vue","项目记录"]
+tags: ["Vue", "项目记录"]
+categories: ["Frontend"]
 author: ""
 
-showToc: true
-TocOpen: true
-hidemeta: false
-comments: true
-description: ""
+# showToc: true
+# TocOpen: true
+# hidemeta: false
+# comments: true
+# description: ""
 # canonicalURL: "https://canonical.url/to/page"
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: false
+# disableShare: false
+# disableHLJS: false
+# hideSummary: false
+# searchHidden: true
+# ShowReadingTime: true
+# ShowBreadCrumbs: true
+# ShowPostNavLinks: true
+# ShowWordCount: true
+# ShowRssButtonInSectionTermList: true
+# UseHugoToc: false
 ---
 
 穷游小项目跟练第二天。发现这虽然只是个随便练手的小项目，但是真的能练到很多理论上看过但没用过的功能（对我这种没有实战经验的小菜鸡来说）。

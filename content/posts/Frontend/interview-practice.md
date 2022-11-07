@@ -5,23 +5,23 @@ draft: false
 
 keywords: ["interview"]
 description: ""
-tags: ["interview"]
+tags: ["interview", "js", "Vue", "CS"]
 categories: ["Frontend"]
 author: ""
 
-hidemeta: false
-comments: true
+# hidemeta: false
+# comments: true
 # canonicalURL: "https://canonical.url/to/page"
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: false
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: false
+# disableShare: false
+# disableHLJS: false
+# hideSummary: false
+# searchHidden: false
+# ShowReadingTime: true
+# ShowBreadCrumbs: true
+# ShowPostNavLinks: true
+# ShowWordCount: true
+# ShowRssButtonInSectionTermList: true
+# UseHugoToc: false
 ---
 
 方便反复诵读复习
@@ -1117,6 +1117,11 @@ Diff算法用来找出虚拟DOM中被改变的部分，然后针对原生DOM进�
 ## 4.12 v-if 和 v-show
 - v-if 一开始不渲染，不在 DOM 树中，节点要显示出来才开始渲染，渲染一次消耗很大
 - v-show 一开始渲染好了只是不显示，适用于隐藏显示操作频繁的情况
+
+## 4.13 为什么 data 不能是一个匿名函数？
+
+## 4.14 为什么 v-for 和 v-if 不要一起使用？
+
 
 # 5. Webpack
 

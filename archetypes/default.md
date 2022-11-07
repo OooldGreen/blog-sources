@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }} 
-lastmod: {{ .Date }} 
+lastmod: {{ .Lastmod }} 
 draft: true
 
 keywords: [""]
@@ -17,10 +17,10 @@ comments: true
 # disableHLJS: false
 # hideSummary: false
 # searchHidden: false
-# ShowReadingTime: true
+# ShowReadingTime: false
 # ShowBreadCrumbs: true
 # ShowPostNavLinks: true
-# ShowWordCount: true
+# ShowWordCount: false
 # ShowRssButtonInSectionTermList: true
 ---
 
