@@ -60,7 +60,6 @@ double(3, successCallback, failureCallback);
 
 这个方法就是 ES6 推出的 Promise
 
-
 # Promise对象是什么
 Promise是一个异步操作，通俗来说就是Promise里面的程序运行完根据返回值再进行下一步操作，这样不用一直在函数体里一直嵌套回调。
 
@@ -257,7 +256,3 @@ foo();
 - [JavaScript高级程序设计（第4版）](https://book.douban.com/subject/35175321/)
 - [阮一峰老师的ES6入门](https://es6.ruanyifeng.com/#docs/promise)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-
-
-
-

@@ -78,7 +78,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Home"
-    Content: Welcome to Shirley's cabin!
+    Content: Welcome to Shirley's blog!
 
   # 社交链接
   socialIcons:
