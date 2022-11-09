@@ -76,7 +76,7 @@ author: ""
 ## 1.4 HTTP 和 HTTPS
 ### HTTP 和 HTTPS 的区别
 - HTTPS 加入了 SSL 证书进行加密，HTTP 不用
-- HTTPS更安全，更利于 SEO
+- HTTPS 更安全，更利于 SEO
 - HTTPS 基于传输层，HTTP 基于应用层
 - HTTPS 标准端口 43，HTTP 标准端口 80
 
@@ -214,7 +214,7 @@ cookie、localStorage 和 sessionStorage 都是浏览器本地缓存方式。
     // 使用的时候挂载： window.onload = lazyload()
     ```
 - intersection observer：要考虑兼容性
-- css图像：利用background-image，当ja检测到元素处于视窗中，加一个class类名引用外部图片资源
+- css图像：利用 background-image，当 js 检测到元素处于视窗中，加一个 class 类名引用外部图片资源
 
 [更全面的 js 功能实现](https://juejin.cn/post/6844904066418491406#heading-3)
 
@@ -228,7 +228,7 @@ import UserDetails from './views/UserDetails'
 const UserDetails = () => import('./views/UserDetails')
 ```
 
-使用webpack（babel）分块导入，只需要使用命名 chunk，魔法注释提供chunk name 
+使用 webpack（babel）分块导入，只需要使用命名 chunk，魔法注释提供 chunk name 
 
 ```js
 const Users = () => import(/* webpackChunkName: "users-rights-roles" */ '../components/user/Users.vue')
@@ -244,7 +244,7 @@ const Rights = () => import(/* webpackChunkName: "users-rights-roles" */ '../com
 优势：
 1. 减少网络传输，提高传输效率
 2. 首屏渲染快
-3. 有利于SEO，提高搜索效率
+3. 有利于 SEO，提高搜索效率
 
 缺点：
 1. 不利于前后端分离，开发效率不高
@@ -323,9 +323,9 @@ BigInt 和 Symbol 是 ES6 新的数据类型，Symbol 创建一个不重复的�
 ### 数组方法
 增删改查：push、pop、shift、unshift、concat、join、reverse、sort、map、forEach、reduce、slice、splice、forEach、filter、indexOf
 
-改变原数组：push、pop、shify、unshift、reverse、sort、splice
+改变原数组：push、pop、shift、unshift、reverse、sort、splice
 
-不改变原数组：concat、join、filter、slice、reduce
+不改变原数组：concat、join、filter、slice、reduce、map
 
 #### 数组去重
 1. `Array from(new Set(array))`
@@ -362,8 +362,8 @@ function reverse(str){
 - forEach 返回 undefined，改变原数组
 
 ### for...of 和 for...in
-- for in通用的对象遍历，遍历对象的key，也包括原型链上的属性的遍历，是以任意顺序迭代对象的可枚举属性
-- for of遍历的是值，遍历可迭代属性，不能直接用来遍历对象
+- for in 通用的对象遍历，遍历对象的 key，也包括原型链上的属性的遍历，是以任意顺序迭代对象的可枚举属性
+- for of 遍历的是值，遍历可迭代属性，不能直接用来遍历对象
 
 ```javascript
 Object.prototype.objCustom = function() {}; 
@@ -515,7 +515,7 @@ function promiseAll(promises) {
 - let 和 const
 - 箭头函数
 - 模块化导入导出 import/export
-- 异步promise
+- 异步 promise
 - 解构赋值
 
 ### 类
@@ -556,7 +556,7 @@ let p = new Person; // Person
 从宏任务 script 开始，按照 `宏任务 -> 微任务` 的顺序循环处理。先从上到下执行，遇到宏任务放入宏任务队列，遇到微任务放到微任务队列，执行完进入微任务队列出队列处理，然后再处理宏任务，交替进行。
 
 - 宏任务 (macrotask)：script、定时器（setTimeout、setTimeInterval）、I/O
-- 微任务 (microtask)：promise的回调、nextTick、mutationObserver
+- 微任务 (microtask)：promise 的回调、nextTick、mutationObserver
 
 ## 2.9 事件委托
 利用事件冒泡，把事件绑定到父元素上，当子元素发生事件时，通过冒泡触发父元素身上的事件从而做出响应。
@@ -756,13 +756,13 @@ document.addEventListener('scroll', better_scroll)
 - video 和 audio
 - localStorage 和 sessionStorage
 - 语义化更好的元素内容，如 article, footer, header, nav, svg, figure, menu
-- 新的技术 webworker websocket
+- 新的技术 webworker、 websocket
 
 ### 移除的元素
 - 纯表现的元素，例如 big，basefont，s，u
 - 对可用性产生负面影响，例如 frame，noframes
 
-## 3.2 HTML 语意化
+## 3.2 HTML 语义化
 - 结构清晰，利于 SEO
 - 便于维护
 - 没有 css 也能看懂
@@ -809,7 +809,7 @@ document.addEventListener('scroll', better_scroll)
 - float 不为 none
 - oveflow 不为 visible
 
-## 3.6 CSS3新特性
+## 3.6 CSS3 新特性
 - border-radius，box-shadow
 - 文本效果 text-shadow、font-family、font-weight、font-style
 - 多背景 rgba
@@ -981,7 +981,7 @@ document.addEventListener('scroll', better_scroll)
 总之，link 要优于 @import。
 
 ## 3.12 雪碧图
-将一个页面设计到的图片包含道一张图片里去，然后通过定位的方法选取合适的图片。
+将一个页面设计到的图片包含到一张图片里去，然后通过定位的方法选取合适的图片。
 
 这样做的好处是：
 - 可以一次请求完所有图片，不用发很多请求，加快了速度，提升了页面性能
@@ -994,8 +994,8 @@ document.addEventListener('scroll', better_scroll)
 
 ## 3.13 伪类和伪元素
 根本不同在于是否创建了新的 DOM 元素
-- 伪类操作文档中已有的元素
-- 伪元素创建新的元素进行操作
+- 伪类操作文档中已有的元素，如 `:hover`、`:link`、`:focus`
+- 伪元素创建新的元素进行操作，如 `::first-line`、`:before`、`:after`
 
 ## 3.14 [flex布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
@@ -1029,32 +1029,32 @@ rem 经常被用于移动端响应式的布局，原理是通过 媒体查询 �
 - after 伪元素清除浮动
     ```css
     .clearfix:after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
     }
 
     /* IE6、7 专有 */
     .clearfix {
-    *zoom: 1;
+        *zoom: 1;
     }
     ```
 - before 和 after 双伪元素清除浮动
     ```css
     .clearfix:before,
     .clearfix:after {
-    content: "";
-    display: table;
+        content: "";
+        display: table;
     }
 
     .clearfix:after {
-    clear: both;
+        clear: both;
     }
 
     .clearfix {
-    *zoom: 1;
+        *zoom: 1;
     }
     ```
 
@@ -1090,21 +1090,21 @@ mvvm 把 view 和 model 的同步逻辑自动化，只需要告诉 view 的显�
 
 ## 4.2 生命周期
 Vue 有完整的生命周期，创建 -> 挂载 -> 更新 -> 销毁
-- beforeCreated
-    开始创建数据，只有默认的生命周期钩子和默认事件，data和methods还没有初始化
-- Created
+- beforeCreated  
+    开始创建数据，只有默认的生命周期钩子和默认事件，data 和 methods 还没有初始化
+- Created  
     data 有了，可以访问数据和方法，但没有挂载到 DOM，可以操作数据
-- beforeMount
+- beforeMount  
     挂载之前，编译好了，但还没有挂载到页面上
-- Mounted
+- Mounted  
     到此创建完成了，可以进行 DOM 操作了
-- beforeUpdate
+- beforeUpdate  
     data 中数据已经更新了，但还没有更新到页面上，页面上还是旧的数据
-- Updated
+- Updated  
     页面上的数据被更新了，页面和 data 中数据一致了
-- beforeDestroy
+- beforeDestroy  
     销毁之前，适合销毁定时器等
-- Destroyed
+- Destroyed  
     所有的数据、方法、过滤器、指令都不可用了，组件已经被销毁了
 
 ## 4.3 双向绑定
@@ -1112,13 +1112,14 @@ Vue 有完整的生命周期，创建 -> 挂载 -> 更新 -> 销毁
 Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 getter 和 setter，组件的 data 发生变化时，将变化发布给订阅者，订阅者收到消息后进行处理
 
 缺点：
-- 无法监听数组的变化，必须使用数组的方法
+- 无法监听数组通过下标改变对应数据
 - 无法对新增加或删除的属性进行监听，需要使用 Vue.set()
+- 一次性递归到底开销很大
 
 ### Proxy
 使用 ES6 提供的 Proxy 进行数据拦截，劫持整个对象，然后返回一个新对象
 
-解决无法监听新增属性或删除属性的响应式问题、解决无法监听数组长度和index变化问题。
+解决无法监听新增属性或删除属性的响应式问题、解决无法监听数组长度和 index 变化问题。
 
 ## 4.4 Vue3新特性
 - proxy 代替 Object.defineProperty
@@ -1129,12 +1130,12 @@ Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 
 
 ## 4.5 路由
 ### history
-美观但兼容性略差，部署上线可能会出现 404 问题
+美观但兼容性略差，部署上线可能会出现 404 问题。
 
 解决方法：使用 node 的 connect-history 中间件
 
 ### hash
-哈希模式 # 后面的路径不发送给服务器，不太美观，但兼容性好，有可能被 APP 标记为不合法
+哈希模式 # 后面的路径不发送给服务器，不太美观，有可能被 APP 标记为不合法，但兼容性好。
 
 ## 4.6 路由守卫
 作用：保护路由的安全，权限问题
@@ -1142,7 +1143,7 @@ Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 
 ### 全局路由守卫
 分为`beforeEach、beforeResolve、afterEach`
 
-使用：全局前置路由守卫`beforeEach`：权限校验
+使用：全局前置路由守卫`beforeEach` 进行权限校验
 
 ### 独享路由守卫
 只有前置守卫`beforeEnter`，是在路由配置页面单独给路由配置的一个守卫
@@ -1153,14 +1154,14 @@ Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 
 分为进入守卫和离开守卫`beforeRouteEnter`、`beforeRouteLeave`、`beforeRouteUpdate`
 
 使用：
- - `beforeRouteLeave`：离开页面时弹出提示窗口，清除当前组件中的定时器等；关闭页面时, 将公用信息保存到session或Vuex中；当前页面中有未关闭的窗口或未保存的内容阻止页面跳转
-  - `beforeRouteUpdate`：动态路由跳转
+- `beforeRouteLeave`：离开页面时弹出提示窗口，清除当前组件中的定时器等；关闭页面时, 将公用信息保存到 session 或 Vuex 中；当前页面中有未关闭的窗口或未保存的内容阻止页面跳转
+- `beforeRouteUpdate`：动态路由跳转
 
 ## 4.7 Vuex
 用于集中式管理数据，一般用于大中型应用
 
 - state：记录数据状态
-- getters：获取数据，可以根据state中的数据进行过滤派生出一些新的数据
+- getters：获取数据，可以根据 state 中的数据进行过滤派生出一些新的数据
 - action：进行异步操作
 - mutations：唯一可以改变 state 中数据的方法
 - module：如果数据较多可以分模块
@@ -1169,7 +1170,7 @@ Object.defineProperty 进行数据劫持，遍历所有的属性给它们增加 
 Vue在更新数据时是异步执行的，data 中数据更新了但页面还没来得及更新，所以如果立刻获取 DOM，获取到的是还没有更新的 DOM，nextTick 就是等数据更新之后再进行 DOM 操作。本质是返回一个 Promise
 
 ## 4.9 Diff算法
-Diff算法用来找出虚拟DOM中被改变的部分，然后针对原生DOM进行渲染，不用改变所有节点重新渲染整个页面
+Diff 算法用来找出虚拟 DOM 中被改变的部分，然后针对原生 DOM 进行渲染，不用改变所有节点重新渲染整个页面
 
 比较方式
 - 同层比较：两个树的完全的 diff 算法是一个时间复杂度为 O(n^3) 的问题。但是在前端当中，你很少会跨越层级地移动 DOM 元素。所以 Virtual DOM 只会对同一个层级的元素进行对比，这样算法复杂度就可以达到 O(n)。
@@ -1180,11 +1181,11 @@ Diff算法用来找出虚拟DOM中被改变的部分，然后针对原生DOM进�
 - 子传父：$emit, $on
 - 任意组件间
     - vuex
-    - eventbus：使用方法是创建一个新的Vue实例，需要通信的组件都引入该Vue实例，传递数据的组件使用` event.$emit('名称',参数)`发送数据，接收数据的组件使用 `event.$on('名称',方法)`接收数据
+    - eventbus：使用方法是创建一个新的Vue实例，需要通信的组件都引入该Vue实例，传递数据的组件使用 ` event.$emit('名称',参数)` 发送数据，接收数据的组件使用 `event.$on('名称',方法)` 接收数据
     - 订阅发布模式
 
 ## 4.11 keep-alive
-用`<keep-alive>`标签对需要缓存的组件进行包裹，保存内存中组件的状态，进行缓存，防止重新加载 DOM，减少加载时间，提高性能。
+用 `<keep-alive>` 标签对需要缓存的组件进行包裹，保存内存中组件的状态，进行缓存，防止重新加载 DOM，减少加载时间，提高性能。
 
 多了两个生命周期：activated、deactivated，分别在进入和退出时触发。
 
