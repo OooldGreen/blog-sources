@@ -594,7 +594,49 @@ let p = new Person; // Person
 
 ## 2.11 bind, apply 和 call
 - 作用都是改变 this 指向
-- apply 接收参数是一个数组，call 和 bind 可以接收多个参数
+- apply 接收参数只能是一个数组，call 和 bind 接收参数要一个一个传入参数
+- bind 直接改变 this 指向并返回一个新函数，之后再调用 this 都指向 bind 绑定的第一个参数
+
+### 实现 apply
+```js
+Function.prototype.myApply = function(context, args) {
+    // 默认上下文为 window，不传参数就是空数组
+    context = context || windows;
+    args = args ? args : [];
+
+    // 给 context 新增一个独一无二的属性
+    // 用隐式绑定的方法调用函数
+    // 再删除添加的属性
+    const key = Symbol();
+    context[key] = this;
+    const result = context[key](...args);
+    delete context[key];
+
+    return result; 
+}
+```
+
+### 实现 bind
+```js
+Function.prototype.myBind = function(context, ...args) {
+    args = args ? args : []; 
+    const fn = this;
+
+    const result = function(..fnArgs) {
+        // 如果是通过 new 调用的，绑定 this 为实例对象
+        if (this instanceof result) {
+        fn.apply(this, [...args, ...fnArgs]);
+        } else { // 否则普通函数形式绑定 context
+        fn.apply(context, [...args, ...fnArgs]);
+        }
+    }
+
+    // 绑定原型链
+    result.prototype = Object.create(fn.prototype);
+
+    return result;
+}
+```
 
 ## 2.12 垃圾回收
 
