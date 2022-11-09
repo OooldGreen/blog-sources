@@ -298,6 +298,11 @@ const Rights = () => import(/* webpackChunkName: "users-rights-roles" */ '../com
 |Safari|Webkit|
 |Opera|Blink|
 
+## 1.14 get 和 post 请求的区别
+- get 回退是无害的，post 会再次提交请求
+- get 参数通过 url 进行传递，更不安全，有长度限制；post 参数放在 request body 中，更安全，没有长度限制
+- get 会被浏览器主动缓存保存参数，post 不会
+- get 产生一个 TCP 数据包，post 产生两个（在 Firefox 中只有一个）
 
 # 2. JS
 ## 2.1 数据类型
