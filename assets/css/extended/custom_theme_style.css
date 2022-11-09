@@ -28,7 +28,7 @@
   /* 代码背景颜色 */
   --code-bg: #ebe8e1;
   /* 边框颜色 */
-  --border: rgb(238, 238, 238);
+  --border: #6b6e77;
 }
 
 /* 页面上方home info
@@ -73,7 +73,7 @@
 }
 /* 目录背景颜色 */
 .toc {
-  background-color: #F4F4F4;
+  background-color: var(--entry);
   border: none;
 }
 /* 面包屑导航 */
@@ -82,7 +82,7 @@
 }
 /* home list卡片背景颜色 */
 .list {
-  background-color: #dedad2;
+  background-color: var(--theme);
 }
 /* 单个post下方footer样式 */
 .post-footer {
@@ -91,7 +91,7 @@
 /* footer标签颜色、下一篇博客功能 */
 .post-tags a {
   background-color: #f4f4f4;
-  border: 1px solid #dedad2;
+  border: 1px solid var(--theme);
 }
 .paginav {
   line-height: 25px;
@@ -137,7 +137,7 @@
   /* --hljs-bg: rgb(46, 46, 51); */
   /* 代码背景颜色 */
   --code-bg: #6b6e77;
-  --border: #595a5c;
+  --border: #ebe8e1;
 }
 /* 单个博客背景色 */
 .dark .post-single {
@@ -169,3 +169,8 @@
   color: var(--primary);
 }
 /* ------------------------------------------------------------ */
+.share-buttons {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--entry);
+}
