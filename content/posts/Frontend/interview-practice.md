@@ -1293,7 +1293,7 @@ module.exports = {
 ```
 
 # 6. 数据结构
-## 6.1 (常用的数据结构类型有哪些)[https://zh.m.wikipedia.org/zh-hans/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84]
+## 6.1 [常用的数据结构类型有哪些](https://zh.m.wikipedia.org/zh-hans/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
 数组、栈、堆、队列、链表、散列表、树、图
 
 ## 6.2 二分查找
