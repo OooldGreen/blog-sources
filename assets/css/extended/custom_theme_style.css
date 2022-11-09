@@ -28,7 +28,7 @@
   /* 代码背景颜色 */
   --code-bg: #ebe8e1;
   /* 边框颜色 */
-  --border: #6b6e77;
+  --border: #F4F4F4;
 }
 
 /* 页面上方home info
@@ -137,7 +137,7 @@
   /* --hljs-bg: rgb(46, 46, 51); */
   /* 代码背景颜色 */
   --code-bg: #6b6e77;
-  --border: #ebe8e1;
+  --border: #595a5c;
 }
 /* 单个博客背景色 */
 .dark .post-single {
@@ -173,4 +173,7 @@
   border: none;
   border-radius: 5px;
   background-color: var(--entry);
+}
+table {
+  border-color: var(--secondary);
 }
