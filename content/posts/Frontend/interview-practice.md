@@ -573,22 +573,22 @@ let p = new Person; // Person
 - 自己写，递归拷贝
     ```js
     function deepClone(obj) {
-    // 检测是否为 Array
-    let objClone = Array.isArray(obj) ? [] : {};
-    if (obj && typeof obj === "object") {
-        for (key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            //判断obj子元素是否为对象，如果是，递归复制
-            if (obj[key] && typeof obj[key] === "object") {
-            objClone[key] = deepClone(obj[key]);
-            } else {
-            //如果不是，简单复制
-            objClone[key] = obj[key];
+        // 检测是否为 Array
+        let objClone = Array.isArray(obj) ? [] : {};
+        if (obj && typeof obj === "object") {
+            for (key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    //判断obj子元素是否为对象，如果是，递归复制
+                    if (obj[key] && typeof obj[key] === "object") {
+                        objClone[key] = deepClone(obj[key]);
+                    } else {
+                        //如果不是，简单复制
+                        objClone[key] = obj[key];
+                    }
+                }
             }
         }
-        }
-    }
-    return objClone;
+        return objClone;
     }
     ```
 
@@ -625,9 +625,9 @@ Function.prototype.myBind = function(context, ...args) {
     const result = function(..fnArgs) {
         // 如果是通过 new 调用的，绑定 this 为实例对象
         if (this instanceof result) {
-        fn.apply(this, [...args, ...fnArgs]);
+            fn.apply(this, [...args, ...fnArgs]);
         } else { // 否则普通函数形式绑定 context
-        fn.apply(context, [...args, ...fnArgs]);
+            fn.apply(context, [...args, ...fnArgs]);
         }
     }
 
@@ -860,12 +860,12 @@ document.addEventListener('scroll', better_scroll)
 5. table-cell 布局
     ```css
     .parent {
-    display: table-cell;
-    text-align: center;
-    vertical-align:center;
+        display: table-cell;
+        text-align: center;
+        vertical-align:center;
     }
     .item {
-    display: inline-block;
+        display: inline-block;
     }
     ```
 
@@ -1012,7 +1012,7 @@ document.addEventListener('scroll', better_scroll)
 - flex: 1 包含了三个元素：grow, shrink, basis，默认值为 0 1 auto
     ```css
     .item {
-    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+        flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
     }
     ```
 
