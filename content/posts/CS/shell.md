@@ -65,9 +65,9 @@ author: ""
 - `ls`: see what lives in current directory
     ```bash
     missing % ls
-    Applications		Postman
-    Aurora				Public
-    Desktop				Zotero
+    Applications        Postman
+    Aurora		    Public
+    Desktop		    Zotero
     ...
     ```
     - `-h / --help`: get help

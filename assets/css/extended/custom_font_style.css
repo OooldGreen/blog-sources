@@ -10,25 +10,26 @@
  ** 英文默认字体 
  ** 备胎字体
 */
-/* html{
-  font-family: 'Latin Modern Math', sans-serif 'Noto Serif SC',   
+/* body {
+  font-family: 'Latin Modern Math', 'Noto Serif SC',   
                Georgia, -apple-system, 'Nimbus Roman No9 L',
                'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei',  
                'WenQuanYi Micro Hei', 'ST Heiti', cursive, sans-serif; 
 } */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
   font-weight: 300;
 }
 pre, code {
   font-family: 'FreeMono', sans-serif;
+  -webkit-text-size-adjust: none;
 }
 h1, h2, h3, h4, h5, h6,
 div, p, a, span, li, body {
   font-family: inherit;
 }
 h1, h2, h3, h4, h5, h6, strong {
-  font-weight: 350 !important;
+  font-weight: 400 !important;
 }
 a, li {
   font-weight: 300 !important;
@@ -40,19 +41,14 @@ a, li {
 /* 表格表头 */
 .post-content table th {
   font-size: 16px;
-  font-weight: 350;
+  font-weight: 400;
 }
 .post-content blockquote {
   border-inline-start: 2px solid var(--secondary);
 }
 .active,
 .post-content figure>figcaption {
-  font-weight: 330 !important;
-  border-bottom: 1px solid !important;
-}
-/* 取消标题鼠标悬浮下划线 */
-.toc a:hover {
-  box-shadow: 0 0;
+  font-weight: 400 !important;
 }
 .archive-entry:hover {
   transform: scale(1.01);

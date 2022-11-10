@@ -76,7 +76,7 @@ hugo new site quickstart
     ```
 
 当然，也可以创建自己的主题：
-```text
+```hugo
 hugo new theme <THEMENAME>
 ```
 
@@ -113,7 +113,7 @@ hugo new post/my-first-post.md
 
 ### 把本地博客文件关联到这个仓库
 这步按照`GitHub`创建仓库后的指示走就完全可以
-```text
+```git
 git init
 git status
 git add .
