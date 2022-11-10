@@ -36,7 +36,7 @@ a, li {
 }
 /* logo字体 */
 .logo a {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 /* 表格表头 */
 .post-content table th {
