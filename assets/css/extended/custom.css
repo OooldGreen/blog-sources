@@ -4,9 +4,20 @@
  **
 */
 
-/* 设置博客内容宽度 */
+/* 设置博客内容宽度、固定导航栏宽度 */
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6);
+  margin-top: var(--header-height);
+}
+
+/* nav 导航栏固定 */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--theme);
+  z-index: 9999;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 15%);
 }
 
 @media screen and (max-width: 768px) {
@@ -27,6 +38,11 @@
   .archive-year,
   .terms-tags {
       margin: 15px;
+  }
+
+  /* 固定导航栏宽度 */
+  .main {
+    margin-top: 160px;
   }
 }
 
