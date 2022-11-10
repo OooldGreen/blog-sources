@@ -11,15 +11,15 @@ author: ""
 
 ---
 
-汇总`Promise`对象的由来、用法、方法和`async/await`
+汇总 `Promise` 对象的由来、用法、方法和 `async/await`
 
-从是什么，怎么用开始讲起啦，然后讲讲具体有哪些方法和应用场景，最后再浅提一下`async/await`
+从是什么，怎么用开始讲起啦，然后讲讲具体有哪些方法和应用场景，最后再浅提一下 `async/await`
 
 <!--more-->
 
-# 为什么要有Promise对象
+# 为什么要有 Promise 对象
 
-一句话：解决回调地狱(callback hell)
+一句话：解决回调地狱 (callback hell)
 
 如果你想进行一个异步操作，比方说，有先后顺序的打印两个结果，你会怎么写？
 

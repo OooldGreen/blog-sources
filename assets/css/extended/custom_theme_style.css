@@ -30,29 +30,6 @@
   /* 边框颜色 */
   --border: #F4F4F4;
 }
-
-/* 页面上方home info
-.header_homeinfo {
-  display: block;
-  position: relative;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
-  max-width: calc(var(--main-width) + var(--gap) * 6);
-  margin: auto;
-  padding: var(--gap);
-}
-.header_homeinfo article {
-  margin: 24px 0 12px;
-}
-.entry-header a {
-  font-size: 34px;
-  line-height: 1.3;
-  font-weight: bold;
-} */
-
-/* .main {
-  background-color: #f4f4f4;
-} */
-
 /* 单个博客框背景颜色 */
 .post-single {
   margin-top: 60px;
@@ -115,9 +92,10 @@
   color: var(--secondary);
 }
 /* archive鼠标点击响应 */
-.archive-entry:hover {
-  background-color: #f4f4f4;
-  border-radius: 0px;
+.archive-entry .archive-entry-title:hover {
+  border-bottom: 1px solid var(--secondary) !important;
+  /* transform: scale(1.05); */
+  /* border-radius: 0px; */
 }
 /* ----------------------------------------------- */
 /* dark模式 博客配色 */
@@ -169,11 +147,16 @@
   color: var(--primary);
 }
 /* ------------------------------------------------------------ */
+/* 分享按钮背景 */
 .share-buttons {
-  border: none;
-  border-radius: 5px;
   background-color: var(--entry);
 }
+/* 表格框线 */
 th,td {
   border-bottom: 1px solid var(--secondary) !important;
+}
+/* 分割线 */
+.post-content hr {
+  height: 1px;
+  background-color: var(--secondary);
 }
