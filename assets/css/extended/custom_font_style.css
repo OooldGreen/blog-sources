@@ -16,6 +16,10 @@
                'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei',  
                'WenQuanYi Micro Hei', 'ST Heiti', cursive, sans-serif; 
 } */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
 body {
   font-family: 'Montserrat';
   font-weight: 300;
