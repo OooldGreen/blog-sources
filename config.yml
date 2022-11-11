@@ -139,6 +139,10 @@ menu:
       name: Tags
       url: /tags/
       weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
     # - identifier: example
     #   name: example.org
     #   url: https://example.org
