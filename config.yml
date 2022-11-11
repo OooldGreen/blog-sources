@@ -43,6 +43,8 @@ params:
   showtoc: true
   tocopen: true
 
+  ShareButtons: ["twitter", "reddit", "facebook", "telegram", "whatsapp"] # To customize which share buttons to be enabled on page
+
   # 配置网站图标
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -121,6 +123,7 @@ params:
     threshold: 0.4
     minMatchCharLength: 0
     keys: ["title", "permalink", "summary", "content"]
+
 # 右上角菜单
 menu:
   main:
@@ -151,3 +154,10 @@ markup:
     guessSyntax: true
     lineNos: true
     style: monokai
+
+# for search page
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
