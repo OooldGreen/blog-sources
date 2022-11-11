@@ -16,7 +16,7 @@
   top: 0;
   width: 100%;
   background-color: var(--theme);
-  z-index: 9999;
+  z-index: 1000;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 25%);
 }
 
@@ -63,6 +63,16 @@
 }
 
 /* 去除角标 */
-sup:not(.sup) {
+sup:not(.draft-sup) {
   display: none;
+}
+
+/* list卡片 read more 样式 */
+.meta-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.title-link:hover {
+  border-bottom: 1px solid var(--secondary);
 }

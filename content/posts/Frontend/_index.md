@@ -1,6 +1,7 @@
 ---
 title: "Frontend"
-# layout: "frontend"
+layout: "frontend"
 url: "/posts/frontend"
 # summary: Frontend
+searchHidden: true
 ---

@@ -92,12 +92,7 @@
 .paginav .next span {
   color: var(--secondary);
 }
-/* archive鼠标点击响应 */
-.archive-entry .archive-entry-title:hover {
-  border-bottom: 1px solid var(--secondary) !important;
-  /* transform: scale(1.05); */
-  /* border-radius: 0px; */
-}
+
 /* ----------------------------------------------- */
 /* dark模式 博客配色 */
 /* #ebe8e1 #dedad2  #6b6e77 #595a5c #434446 */
@@ -138,11 +133,6 @@
 .dark .paginav .next:hover,
 .dark .paginav .prev:hover {
   background-color: #595a5c;
-}
-/* archive鼠标点击响应 */
-.dark .archive-entry:hover {
-  background-color: #595a5c;
-  border-radius: 0px;
 }
 .dark .breadcrumbs a:hover {
   color: var(--primary);
