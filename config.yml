@@ -27,6 +27,7 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  ShowLastMod: true #显示文章更新时间
   ShowReadingTime: false  # 阅读时间
   ShowShareButtons: true # 分享按钮
   ShowPostNavLinks: true
@@ -127,21 +128,20 @@ params:
 # 右上角菜单
 menu:
   main:
+    - identifier: search
+      name: 🔍
+      weight: 10
     - identifier: archives
       name: Archive
       url: /archives/
-      weight: 10
+      weight: 20
     - identifier: categories
       name: Categories
       url: /categories/
-      weight: 20
+      weight: 30
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 30
-    - identifier: search
-      name: Search
-      url: /search/
       weight: 40
     # - identifier: example
     #   name: example.org

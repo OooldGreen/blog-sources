@@ -81,11 +81,11 @@
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer meta-footer">
+  <footer class="entry-footer footer-meta">
     <span class="read-more">
       <a class="title-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}">Read More... >></a>
     </span>
-    {{- partial "post_meta.html" . -}}
+    <span class="footer-time">{{- partial "post_meta.html" . -}}</span>
   </footer>
   {{- end }}
   <!-- <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a> -->

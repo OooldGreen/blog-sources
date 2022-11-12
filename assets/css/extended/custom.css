@@ -68,11 +68,17 @@ sup:not(.draft-sup) {
 }
 
 /* list卡片 read more 样式 */
-.meta-footer {
+.footer-meta {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 .title-link:hover {
   border-bottom: 1px solid var(--secondary);
+}
+.footer-time span:last-child {
+  display: none;
+}
+.post-meta span:last-child {
+  font-style: italic;
 }

@@ -11,11 +11,8 @@ author: ""
 
 ---
 
-汇总 `Promise` 对象的由来、用法、方法和 `async/await`
-
-从是什么，怎么用开始讲起啦，然后讲讲具体有哪些方法和应用场景，最后再浅提一下 `async/await`
-
-<!--more-->
+汇总 `Promise` 对象的由来、用法、方法和 `async/await`。  
+从是什么，怎么用开始讲起，然后讲讲具体有哪些方法和应用场景，最后再浅提一下 `async/await`。
 
 # 为什么要有 Promise 对象
 

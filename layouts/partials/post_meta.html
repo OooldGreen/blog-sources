@@ -3,11 +3,12 @@
 
 {{- if not .Date.IsZero -}}
 {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
-{{- end}}
+{{- end }}
 
-{{/*- if not .Lastmod.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Lastmod) (.Lastmod | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
-{{- end*/}}
+<!-- 更新时间 -->
+{{- if (.Param "ShowLastMod") -}}
+{{- $scratch.Add "meta" (slice (printf "<span>[LastMod:&nbsp;%s]</span>" (.Lastmod.Format (.Site.Params.dateFormat | default "January 2, 2006")))) }}
+{{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
 {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
@@ -22,5 +23,5 @@
 {{- end */}}
 
 {{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" -}}
+{{- delimit . "&nbsp;&nbsp;" -}}
 {{- end -}}
