@@ -1,6 +1,8 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    {{- partial "extend_footer.html" . }}
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" site.Params.socialIcons }}
+    </footer>
     {{- if site.Copyright }}
     <span>{{ site.Copyright | markdownify }}</span>
     {{- else }}
@@ -22,7 +24,7 @@
 </a>
 {{- end }}
 
-<!-- {{- partial "extend_footer.html" . }} -->
+{{- partial "extend_footer.html" . }}
 
 <script>
     let menu = document.getElementById('menu')
@@ -57,13 +59,18 @@
 {{- if (not site.Params.disableScrollToTop) }}
 <script>
     var mybutton = document.getElementById("top-link");
+    var mybutton2 = document.getElementById("search-link");
     window.onscroll = function () {
         if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
             mybutton.style.visibility = "visible";
             mybutton.style.opacity = "1";
+            mybutton2.style.visibility = "visible";
+            mybutton2.style.opacity = "1";
         } else {
             mybutton.style.visibility = "hidden";
             mybutton.style.opacity = "0";
+            mybutton2.style.visibility = "hidden";
+            mybutton2.style.opacity = "0";
         }
     };
 

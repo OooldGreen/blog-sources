@@ -33,10 +33,9 @@
 } */
 /* 单个博客框背景颜色 */
 .post-single {
-  margin-top: 60px;
+  margin-top: calc(var(--gap)*4);
   padding: 30px;
   background-color: #f4f4f4;
-  border-radius: 3px;
 }
 /* 面包屑导航 */
 .breadcrumbs {

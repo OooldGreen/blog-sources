@@ -23,7 +23,7 @@
 
 .wide .toc {
     position: sticky;
-    top: var(--gap);
+    top: calc(var(--gap)*2.5);
     border: unset;
     background: unset;
     border-radius: unset;
