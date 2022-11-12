@@ -51,6 +51,7 @@ a, li {
   font-weight: 400 !important;
 }
 .archive-entry:hover {
+  transition: transform .4s;
   transform: scale(1.01);
 }
 
