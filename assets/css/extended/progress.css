@@ -2,16 +2,16 @@
     /* Positioning */
     position: fixed;
     left: 0;
-    top: 0;
-    z-index: 1000;
+    top: 0px;
+    z-index: 100;
     width: 100%;
-    height: 2px;
+    height: 3px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
     background-color: transparent;
-    color: #35a935;
+    color: #61bcb7;
 }
 
 #content_progress::-webkit-progress-bar {
@@ -19,9 +19,9 @@
 }
 
 #content_progress::-webkit-progress-value {
-    background-color: #35a935;
+    background-color: #61bcb7;
 }
 
 #content_progress::-moz-progress-bar {
-    background-color: #35a935;
+    background-color: #61bcb7;
 }

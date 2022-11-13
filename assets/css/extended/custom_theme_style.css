@@ -142,7 +142,7 @@
   background-color: var(--entry);
 }
 /* 表格框线 */
-th,td {
+th {
   border-bottom: 1px solid var(--secondary) !important;
 }
 /* 分割线 */

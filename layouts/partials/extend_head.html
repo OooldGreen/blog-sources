@@ -9,7 +9,24 @@
 <!-- 代码字体样式 -->
 <link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet"> 
 
+{{- if .Content }}
 <progress id="content_progress" value="0"></progress>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var winHeight = window.innerHeight,
+            docHeight = document.documentElement.scrollHeight,
+            progressBar = document.querySelector('#content_progress');
+        progressBar.max = docHeight - winHeight;
+        progressBar.value = window.scrollY;
+
+        document.addEventListener('scroll', function () {
+            progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.value = window.scrollY;
+        });
+    });
+</script>
+{{- end}}
 
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}

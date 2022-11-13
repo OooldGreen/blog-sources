@@ -7,7 +7,7 @@
 
 <!-- 更新时间 -->
 {{- if (.Param "ShowLastMod") -}}
-{{- $scratch.Add "meta" (slice (printf "<span>[ LastMod:&nbsp;%s ]</span>" (.Lastmod.Format (.Site.Params.dateFormat | default "January 2, 2006")))) }}
+{{- $scratch.Add "meta" (slice (printf "<span>[LastMod:&nbsp;%s]</span>" (.Lastmod.Format (.Site.Params.dateFormat | default "January 2, 2006")))) }}
 {{- end }}
 
 {{- if (.Param "ShowReadingTime") -}}
