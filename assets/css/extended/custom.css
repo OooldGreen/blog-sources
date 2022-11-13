@@ -4,7 +4,7 @@
  **
 */
 
-/* 滚动元素设置 */
+/* 滚动设置 */
 html{
   scroll-padding-top: 160px;
 }
@@ -12,9 +12,10 @@ html{
 /* 设置博客内容宽度 */
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6);
+  margin-top: calc(var(--gap)*3.5);
 }
 
-/* nav 导航栏固定 */
+/* nav 导航栏 ------------------------------ */
 .nav {
   position: fixed;
   top: 0;
@@ -23,36 +24,22 @@ html{
   z-index: 99;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 25%);
 }
-
 .top-link {
   box-shadow: 0 3px 6px -1px rgb(0 0 0 / 25%);
 }
 
 @media screen and (max-width: 768px) {
+  /* 固定导航栏宽度 */
   .main {
-      padding: 0px;
+      padding: 15px;
+      margin-top: 160px;
   }
 
   .post-single {
       padding: 15px !important;
   }
-
-  .first-entry {
-      padding: 0px 20px;
-  }
-
-  .post-entry,
-  .page-header,
-  .archive-year,
-  .terms-tags {
-      margin: 15px;
-  }
-
-  /* 固定导航栏宽度 */
-  .main {
-    margin-top: 160px;
-  }
 }
+/* ----------------------------------------------- */
 
 /* home样式设置 */
 .first-entry {
@@ -61,7 +48,12 @@ html{
 /* 固定导航栏宽度 */
 .first-entry,
 .page-header {
-  margin: calc(var(--gap)*4) 0 calc(var(--gap) * 2) 0;
+  margin: var(--gap) 0 calc(var(--gap) * 2) 0;
+}
+/* archive时间线 */
+.archive-entry:hover {
+  transition: transform .4s;
+  transform: scale(1.01);
 }
 
 /* list卡片样式  ----------------------- */
@@ -77,7 +69,6 @@ html{
   margin-top: 20px;
 }
 .title-link:hover {
-  /* color: rgb(255, 155, 24); */
   color: var(--secondary);
   border-bottom: 1px solid var(--secondary);
 } 
@@ -99,8 +90,28 @@ html{
 sup:not(.draft-sup) {
   display: none;
 }
+.list-count {
+  color: var(--secondary);
+  font-size: 0.85em;
+  padding-left: 5px;
+}
 
-/* scroll to top 和 search 按钮 */
+/* 更多博客按钮 */
+.pagination a {
+  color: var(--primary);
+  background:none;
+  border-radius: 0px;
+  line-height: normal;
+  padding: 0px 2px;
+  font-size: inherit;
+}
+.pagination .next:hover,
+.pagination .prev:hover {
+  color: var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+}
+
+/* scroll to top 和 search 按钮 ----------- */
 .search-link {
   /* visibility: hidden; */
   position: fixed;
@@ -124,3 +135,4 @@ sup:not(.draft-sup) {
       transform: translateY(-5rem);
   }
 }
+/* ------------------------------------------ */

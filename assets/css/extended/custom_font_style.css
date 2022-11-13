@@ -50,10 +50,6 @@ a, li {
 .post-content figure>figcaption {
   font-weight: 400 !important;
 }
-.archive-entry:hover {
-  transition: transform .4s;
-  transform: scale(1.01);
-}
 
 /* 设置字体自适应大小 */
 @media screen and (max-width: 768px) {
@@ -65,6 +61,8 @@ a, li {
     font-size: 16px !important;
   }
 }
+
+/* 字体大小设置 */
 .post-title, .post-content h1 {
   font-size: 2rem;
 }

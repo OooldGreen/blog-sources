@@ -23,6 +23,8 @@
   --code-bg: #ebe8e1;
   /* 边框颜色 */
   --border: #F4F4F4;
+  /* 进度条颜色 */
+  --progress: #61bcb7;
 }
 /* 导航栏背景和字体 */
 .nav {
@@ -33,7 +35,6 @@
 } */
 /* 单个博客框背景颜色 */
 .post-single {
-  margin-top: calc(var(--gap)*4);
   padding: 30px;
   background-color: #f4f4f4;
 }

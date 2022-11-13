@@ -1,7 +1,7 @@
 baseURL: "https://www.snowcabin.tk/"
 title: Snow Cabin
 enableEmoji: true
-paginate: 10
+paginate: 8
 theme: PaperMod
 
 enableRobotsTXT: true
