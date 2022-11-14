@@ -6,7 +6,7 @@
 
 /* 滚动设置 */
 html{
-  scroll-padding-top: 160px;
+  scroll-padding-top: 100px;
 }
 
 /* 设置博客内容宽度 */
@@ -31,7 +31,7 @@ html{
 @media screen and (max-width: 768px) {
   /* 固定导航栏宽度 */
   .main {
-      margin: 160px 0 0 0;
+      margin: 78px 0 0 0;
   }
 
   .post-single {
