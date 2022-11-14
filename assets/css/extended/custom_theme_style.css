@@ -9,8 +9,10 @@
   --radius: 0px;
   /* post背景颜色 */
   --theme:  #dedad2;
+  /* --theme:  #3a2a2b; */
   /* 博客卡片背景颜色 */
   --entry: #F4F4F4;
+  /* --entry: #84a2bc; */
   /* 网页字体颜色 */
   --primary: #434446; 
   --secondary: #6b6e77;
@@ -22,7 +24,7 @@
   /* 代码背景颜色 */
   --code-bg: #ebe8e1;
   /* 边框颜色 */
-  --border: #F4F4F4;
+  --border: #bec0bb;
   /* 进度条颜色 */
   --progress: #61bcb7;
 }
@@ -30,13 +32,10 @@
 .nav {
   background-color: var(--theme);
 }
-/* .nav a {
-  color: var(--code-bg);
-} */
 /* 单个博客框背景颜色 */
 .post-single {
   padding: 30px;
-  background-color: #f4f4f4;
+  background-color: var(--entry);
 }
 /* 面包屑导航 */
 .breadcrumbs {
@@ -45,52 +44,61 @@
 .breadcrumbs a{
   /* padding: 5px; */
   font-size: 14px;
+  color: var(--secondary);
 }
 .breadcrumbs a:hover {
-  color: #434446;
+  color: var(--primary);
 }
 /* 目录背景颜色 */
 .toc {
   background-color: var(--entry);
   border: none;
 }
-/* 面包屑导航 */
-.breadcrumbs a {
-  color: var(--secondary)
-}
 /* home list卡片背景颜色 */
 .list {
   background-color: var(--theme);
 }
+/* read more 样式 */
+.title-link:hover {
+  color: var(--border);
+  border-bottom: 1px solid var(--border);
+} 
 /* 单个post下方footer样式 */
 .post-footer {
   margin-top: 5px;
 }
-/* footer标签颜色、下一篇博客功能 */
+/* footer标签颜色 */
 .post-tags a {
-  background-color: #f4f4f4;
+  background-color: transparent;
   border: 1px solid var(--theme);
 }
+.post-tags a:hover {
+  background-color: var(--code-bg);
+}
+/* 下一篇博客功能 */
 .paginav {
   line-height: 25px;
   margin: 10px 0;
-  background-color: #f4f4f4;
+  background-color: transparent;
   border: none;
 }
 .paginav .prev,
 .paginav .next {
   padding: 0 1px;
 }
-.post-tags a:hover {
-  background-color: #ebe8e1;
-}
 .paginav .next:hover,
 .paginav .prev:hover {
-  background-color: #f4f4f4;
+  background-color: transparent;
 }
 .paginav .prev span,
 .paginav .next span {
   color: var(--secondary);
+}
+/* 主页home更多博客 prev/next */
+.pagination .next:hover,
+.pagination .prev:hover {
+  color: var(--secondary);
+  border-bottom: 1px solid var(--secondary);
 }
 
 /* ----------------------------------------------- */
@@ -113,41 +121,22 @@
   --code-bg: #6b6e77;
   --border: #595a5c;
 }
-/* 单个博客背景色 */
-.dark .post-single {
-  background-color: #595a5c;
-}
-/* 目录背景颜色 */
-.dark .toc,
-.dark .post-tags a,
-.dark .paginav {
-  background-color: #595a5c;
-}
-/* footer标签颜色、下一篇博客功能 */
-.dark .post-tags a {
-  border-color: #434446;
-}
 .dark .post-tags a:hover {
-  background-color: #434446;
-}
-.dark .paginav .next:hover,
-.dark .paginav .prev:hover {
-  background-color: #595a5c;
-}
-.dark .breadcrumbs a:hover {
-  color: var(--primary);
+  background-color: var(--theme);
 }
 /* ------------------------------------------------------------ */
+
 /* 分享按钮背景 */
 .share-buttons {
   background-color: var(--entry);
+  border: none;
 }
 /* 表格框线 */
 th {
-  border-bottom: 1px solid var(--secondary) !important;
+  border-bottom: 1px solid var(--border) !important;
 }
 /* 分割线 */
 .post-content hr {
   height: 1px;
-  background-color: var(--secondary);
+  background-color: var(--border);
 }

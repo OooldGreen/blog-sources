@@ -31,13 +31,15 @@ html{
 @media screen and (max-width: 768px) {
   /* 固定导航栏宽度 */
   .main {
-      padding: 15px;
-      margin-top: 160px;
+      margin: 160px 0 0 0;
   }
 
   .post-single {
-      padding: 15px !important;
+      margin: 0 -24px;
   }
+
+  /* 移动端导航栏diy */
+
 }
 /* ----------------------------------------------- */
 
@@ -68,10 +70,6 @@ html{
   justify-content: space-between;
   margin-top: 20px;
 }
-.title-link:hover {
-  color: var(--secondary);
-  border-bottom: 1px solid var(--secondary);
-} 
 .footer-time span:last-child {
   display: none;
 }
@@ -104,11 +102,6 @@ sup:not(.draft-sup) {
   line-height: normal;
   padding: 0px 2px;
   font-size: inherit;
-}
-.pagination .next:hover,
-.pagination .prev:hover {
-  color: var(--secondary);
-  border-bottom: 1px solid var(--secondary);
 }
 
 /* scroll to top 和 search 按钮 ----------- */
