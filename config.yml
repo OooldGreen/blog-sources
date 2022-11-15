@@ -43,6 +43,7 @@ params:
   hideSummary: false
   showtoc: true
   tocopen: true
+  math: true # 支持 katex 
 
   ShareButtons: ["twitter", "reddit", "facebook", "telegram", "whatsapp"] # To customize which share buttons to be enabled on page
 

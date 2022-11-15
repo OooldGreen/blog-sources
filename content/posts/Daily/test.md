@@ -4,6 +4,7 @@ date: 2022-11-10
 tags: ["Blog", "Personal"]
 categories: ["Daily"]
 draft: true
+math: true
 ---
 
 月光之下，我们哭过笑过；月光之下，你曾说你爱我
@@ -52,3 +53,11 @@ function test(a) {
 }
 test(10)
 ```
+
+这是一行公式：
+$$ 
+\sum_{\substack{i=1}}^{n}a_{n} = a\frac{1-q^{n}}{1-q}
+$$
+
+这是行内公式：\\( a^2 + b^2 = c^2 \\)
+
