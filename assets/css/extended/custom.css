@@ -9,6 +9,11 @@ html{
   scroll-padding-top: 100px;
 }
 
+/* 滚动条设置 */
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
 /* 设置博客内容宽度 */
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6);
