@@ -28,7 +28,7 @@ author: ""
 
 ### 连接navicat
 
-![连接`navicat`](/image/vue-elm/navicat.png)
+![连接`navicat`](/image/frontend/vue-elm/navicat.png)
 
 若果第一步开启好了，点击左下角的test很快就会提示测试连接成功，直接确定就好了
 
