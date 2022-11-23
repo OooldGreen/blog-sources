@@ -135,6 +135,21 @@ export default {
 </svg>
 ```
 
+# 插槽 slot
+在父组件中写入想要插在子组件中的内容，在子组件中用 slot 占好位置，编译的时候就会将父组件中写好的内容根据 slot 的位置注入到子组件中。  
+当需要插入多个 slot 时，可以用 name 来指定插入的是哪一个 slot。  
+```html
+<!-- Home.vue -->
+<HeaderTop>
+  <span class="logo" slot="logo">ele.me</span> 
+</HeaderTop>
+
+<!-- head.vue -->
+<header>
+  <slot name="logo"></slot>
+</header>
+```
+利用 slot 就可以在 head 组件里灵活的根据不同需要组成不同的 header 了。
 
 # 使用 Fetch 发送请求
 [参考 MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
