@@ -2,7 +2,7 @@
 title: "Vue2 Elm 项目记录 Day3"
 date: 2022-11-22
 lastmod: 2022-11-22
-draft: true
+draft: false
 keywords: ["vue", "elm", "项目记录"]
 description: ""
 tags: ["vue2", "项目记录"]

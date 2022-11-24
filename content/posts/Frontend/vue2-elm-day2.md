@@ -87,17 +87,31 @@ const routes = [{ path: 'home', redirect: { name: homepage } }]
 
 # [Vuex](https://vuex.vuejs.org/zh/guide/state.html)
 ## State 状态
-在 state 中记录 vuex 所有状态。Vuex 从根组件注入所有子组件，子组件可以通过 `this.$store` 访问。或者使用 `store.state` 获取数据。
+在 state 中记录 vuex 所有状态。Vuex 从根组件注入所有子组件，子组件可以通过 `this.$store` 访问。或者引入 mapState 使用 `store.state` 获取数据。
+```js
+import {mapState} from 'vuex'
+export default {
+  computed: {
+    ...mapState([
+      'latitude', 'longtitude'
+    ])
+  }
+}
+```
 
 ## Mutation
 ### 提交 Mutation 更改 State
+可以在组件中使用 `this.$store.commit('xxx')` 提交 mutation，也可以借助 mapMutation 辅助函数将组件中的 methods 映射为 `store.commit` 调用（需要在根节点注入 store）
 ```js
-mutations: {
-  increment(state, payload) {
-    state.count += payload
+import { mapMutation } from 'vuex'
+export default {
+  mutations: {
+    increment(state, payload) {
+      state.count += payload
+    }
   }
+  store.commit('increment', 10)
 }
-store.commit('increment', 10)
 ```
 
 ### 使用常量替代 Mutation 事件类型
@@ -121,6 +135,79 @@ const store = {
     }
   }
 }
+```
+
+## 将经纬度数据存储在 Vuex 中
+**1. 创建常量**
+
+新建 mutations-type.js 文件，新建用于记录地址的常量。这样做是为了使所有的 mutation 更加直观，容易理解，当然也可以不这么做。
+```js
+// mutations-type.js
+
+// 记录具体地址
+export const RECORD_ADDRESS = 'RECORD_ADDRESS'
+// 记录经纬度
+export const SAVE_GEOHASH = 'SAVE_GEOHASH'
+```
+**2. Vuex 定义存储操作**
+
+先在 index.js 中定义 state
+```js
+// index.js
+const state = {
+  latitude: '',
+  longtitude: '',
+  geohash: ''
+}
+```
+再在 mutations.js 中定义存储数据操作
+```js
+// mutations.js
+import store from '.'
+import {
+  SAVE_GEOHASH,
+  RECORD_ADDRESS
+} from './mutation-type'
+
+export default {
+  // 记录经纬度
+  [SAVE_GEOHASH](state, geohash) {
+    state.geohash = geohash
+  },
+  // 记录地址
+  [RECORD_ADDRESS](state, {
+    latitude,
+    longtitude
+  }) {
+    store.latitude = latitude
+    store.longtitude = longtitude
+  }
+}
+```
+
+**3. 在组件中操作保存数据**
+
+老规矩，先引入
+```js
+import { mapMutations } from 'vuex' 
+
+export default {
+  data() {
+    return {
+      // 存储 City.vue 传递过来的地址 geohash = 'latitude, longtitude'
+      geohash: '',
+    }
+  },
+  // methods 中引入 mutations 方法
+  methods: {
+    ...mapMutations(['SAVE_GEOHASH', 'RECORD_ADDRESS'])
+  }
+}
+```
+在获取到所需的信息之后将其存储在 Vuex 中
+```js
+this.SAVE_GEOHASH(this.geohash)
+this.RECORD_ADDRESS(res)
 ```
 
 # 搜索城市页面
