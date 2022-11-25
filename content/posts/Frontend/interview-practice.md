@@ -82,7 +82,9 @@ math: true
 - HTTPS 基于传输层，HTTP 基于应用层
 - HTTPS 标准端口 43，HTTP 标准端口 80
 
-### [状态码](https://zh.m.wikipedia.org/zh-hans/HTTP%E7%8A%B6%E6%80%81%E7%A0%81)
+### 状态码
+[参考](https://zh.m.wikipedia.org/zh-hans/HTTP%E7%8A%B6%E6%80%81%E7%A0%81) 
+
 - 1: 临时响应，需要继续处理消息  
     102 Processing: 处理中，通常需要很长时间才能完成请求时发送
 - 2: 请求成功  
@@ -316,7 +318,9 @@ BigInt 和 Symbol 是 ES6 新的数据类型，Symbol 创建一个不重复的�
 - 引用数据类型：Object，存储在堆中，栈中一个指针指向它
 - 普通数据类型：除了 Object 以外其他的数据类型，存储在栈中
 
-### [null 和 undefined 的区别](https://www.nowcoder.com/exam/interview/detail?questionClassifyId=0&questionId=2412346&questionJobId=156&type=1)
+### null 和 undefined 的区别
+[参考](https://www.nowcoder.com/exam/interview/detail?questionClassifyId=0&questionId=2412346&questionJobId=156&type=1)
+
 - null：表示被定义了，但是是空值，占用内存，通过 typeof 判断是 object (这是因为 typeof 通过二进制前三位判断数据类型，null 和 object 一样前三位都是 `000`)
 - undefined：是一个变量未赋值 或 一个函数没有返回值 或 访问一个对象不存在 或 一个函数定义了形参但没有传递实参，通过 typeof 判断是 undefined
 
@@ -402,7 +406,7 @@ for (let i of iterable) {
 - Generator：一个状态机，yield 暂停，next 下一步
 - Async/Await：基于 Promise 实现，看起来很像同步代码，使用上清晰明了
 
-### [Promise]()
+### Promise
 三种状态：PENDING、FULFILLED、REJECTED，状态一旦改变就不会再改变了
 
 方法:
@@ -1004,7 +1008,8 @@ document.addEventListener('scroll', better_scroll)
 - 伪类操作文档中已有的元素，如 `:hover`、`:link`、`:focus`
 - 伪元素创建新的元素进行操作，如 `::first-line`、`:before`、`:after`
 
-## 3.14 [flex布局](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+## 3.14 flex布局
+[参考](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 容器的属性
 - flex: wrap 决定如何换行，nowrap | wrap | wrap-reverse
@@ -1295,7 +1300,9 @@ module.exports = {
 ```
 
 # 6. 数据结构
-## 6.1 [常用的数据结构类型有哪些](https://zh.m.wikipedia.org/zh-hans/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+## 6.1 常用的数据结构类型
+[参考](https://zh.m.wikipedia.org/zh-hans/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
+
 数组、栈、堆、队列、链表、散列表、树、图
 
 ## 6.2 二分查找
@@ -1323,7 +1330,6 @@ var search = function(nums, target) {
 ```
 
 ## 6.3 排序 
-【待总结】
 
 ### 冒泡排序
 从第一个元素开始，把当前元素和下一个索引元素进行比较。如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，那么此时最后一个元素就是该数组中最大的数。下一轮重复以上操作，但是此时最后一个元素已经是最大数了，所以不需要再比较最后一个元素，只需要比较到 `length - 1` 的位置。

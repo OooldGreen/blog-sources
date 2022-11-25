@@ -156,7 +156,7 @@ export const SAVE_GEOHASH = 'SAVE_GEOHASH'
 // index.js
 const state = {
   latitude: '',
-  longtitude: '',
+  longitude: '',
   geohash: ''
 }
 ```
@@ -177,10 +177,10 @@ export default {
   // 记录地址
   [RECORD_ADDRESS](state, {
     latitude,
-    longtitude
+    longitude
   }) {
-    store.latitude = latitude
-    store.longtitude = longtitude
+    state.latitude = latitude
+    state.longitude = longitude
   }
 }
 ```
