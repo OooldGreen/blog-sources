@@ -1,9 +1,9 @@
 ---
 title: "计算机网络" #标题
 date: 2022-11-14T15:57:02+08:00 #创建时间
-lastmod: 2022-11-21T19:00:00+08:00 #更新时间
+lastmod: 2022-11-28T19:00:00+08:00 #更新时间
 categories: ["CS"]
-tags: ["CS","class note",'computer network']
+tags: ["CS","Class Note",'Computer Network']
 description: "Computer Network is a MOOC class." #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 draft: false # 是否为草稿
@@ -130,3 +130,41 @@ UDP（用户数据报）服务的特性：
 - 非导引型媒体：传输电磁波，携带要传输的数据
     - 例如地面微波、LAN、wide-area、卫星等
     - 无需物理“线缆”，双向，有反射、吸收、干扰
+
+---
+
+互联网结构
+- 端系统通过接入 ISPs (Internet Service Providers) 连接到互联网，ISP 也要互相连接，但每两个 ISP 互相连接不具有扩展性，可以将每个接入 ISP 都连接到全局 ISP (Global ISP)，客户 ISPs 和提供者 ISPs 有经纪合约
+- ISP 之间合作可以完成业务的扩展，对等互联 (peer linking) 的结算关系
+- 多个 ISP 接入入互联网交换点 IXP (Internet exchange point)
+- 内容提供者 ICP (Internet Content Providers) 费用高，范围有限，需要部署 DC (data center)，通常部署在离 ISP 较近的地方，用专用线缆连在一起
+
+互联网层次结构是松散的：
+- 中心：第一层 ISP，国家覆盖，效率极高
+- 第二层 ISP：更小些的（通常是区域性的）ISP
+- 第三层：Local ISP
+- ICP等
+
+ISP 之间的连接：
+- POP：高层 ISP 向低层接入，涉及费用结算
+- 多宿 (multi home)：低层 ISP 向多个高层 ISP 接入
+- IXP：对等连接，通常不涉及费用结算
+- ICP自己部署的专用网络，同时和各级 ISP 连接
+
+
+## 延时、丢失和吞吐量分析
+分组延时
+1. 节点处理延时  
+2. 排队延时  
+    根据当时网络情况  
+    流量强度 = L*a/R  
+    流量强度趋近于 0，排队延时很小；流量强度趋近于 1，延时变得很大，趋近于无穷大；设计系统时流量强度不能大于 1。
+3. 传输延时：L/R
+4. 传播延时：d/s  
+
+分组丢失：链路的队列缓冲区容量有限，分组到达一个满的队列就会被丢失，丢失的分组可能会被前一个节点或源端系统重传也可能根本不重传
+
+吞吐量：在源端和目标端之间传输的速率（数据量/单位时间）  
+瓶颈链路：端到端路径上，限制端到端吞吐的链路  
+
+## 协议层次
