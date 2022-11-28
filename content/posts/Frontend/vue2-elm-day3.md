@@ -315,9 +315,181 @@ export default {
 ```
 
 # 加载动画
+创建单独的 Loading 子组件
+## 制作动画
+一跳一跳的 load 动画
+```css
+@keyframes load {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); } 
+  100% { transform: translateY(0px); }
+}
+```
 
+下方椭圆阴影变化动画（水果跳上去阴影变小，水果落下来阴影变大）
+```css
+@keyframes ellipse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.3); }
+  100% { transform: scale(1); }
+}
+```
+
+animation 语法
+```css
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+```
+name 是设定的关键帧的名字；duration 是多久完成这个动画；timing-function 是动画运动的方式，比方说 linear 就是线性运动，ease-in-out 是动画缓慢过渡，加速再减速；iteration-count 设置为 infinite 迭代次数无穷大，即为不断重复。
+
+设定背景图片为加载动画图，并配上动画：
+```css
+.load-img {
+  background: url(../../../images/icon_loading.png) no-repeat 0 0;
+  animation: load .6s ease-in-out infinite;
+}
+
+.load-ellipse {
+  animation: ellipse .6s ease-in-out infinite;
+}
+```
+
+## 图片定时切换
+load 图片一列七个，每次弹跳变换不同的图片，绑定一个变换的 style 属性，通过调整 background 的位置改变图片
+```html
+<div class="load-img" :style="{ backgroundPositionY: -(positionY%7) + 'rem' }"></div>
+```
+再开一个定时器，每 0.6s 换一次图片。一定记得销毁组件之前销毁定时器。
+```js
+export default {
+  data() {
+    return {
+      positionY: 0,
+      timer: null
+    }
+  },
+  mounted() {
+    this.timer = setInterval(() => {
+        this.positionY++;
+    }, 600)
+  },
+  beforeDestroy() {
+    clearInterval(this.timer)
+  }
+}
+```
+
+- [background 参考](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
+- [animation 参考](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+
+## 使用
+引入 Loading 子组件
+```vue
+<template>
+  <!-- 加载动画 -->
+  <transition v-if="showLoading">
+    <Loading/>
+  </transition>
+</template>
+
+<script>
+  import Loading from '../fun/Loading.vue'
+
+  export default {
+    data() {
+      return {
+        showLoading: true, // 显示加载动画，默认显示，页面加载后隐藏
+      }
+    },
+    components: { Loading },
+    mounted {
+      shopList(this.latitude, this.longitude, this.offset, this.restaurantCategoryId).then(res => {
+        this.hideLoading()
+      })
+    },
+    methods: {
+      hideLoading() {
+        this.showLoading = false
+      }
+    }
+  }
+</script>
+```
 
 # 星星打分
+新建一个组件，先做一排五个灰色星星
+```vue
+<template>
+  <div class="container">
+    <span class="star-container">
+        <svg class="star" v-for="item in 5" :key="item">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
+        </svg>
+    </span>
+  </div>
+</template>
+
+<style lang='scss' scoped>
+@import '../../../style/mixin.scss';
+.container {
+  position: relative;
+  width: 3rem;
+}
+.star-container {
+  display: flex;
+  position: absolute;
+  height: 0.6rem;
+  top: 0.2rem;
+}
+.star {
+  height: 0.6rem;
+  width: 0.6rem;
+  fill: #d1d1d1;
+}
+</style>
+```
+
+再做一排橙色星星，宽度按照父组件传过来的 rating 计算比例
+```vue
+<template>
+  <div :style="{ width: (rating/5)*3 + 'rem' }" class="star-overflow">
+    <span class="star-container">
+      <svg class="star orange" v-for="item in 5" :key="item">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star"></use>
+      </svg>
+    </span>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ['rating']
+}
+</script>
+
+<style lang='scss' scoped>
+.star-overflow {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+  .orange {
+    fill: $orange;
+  }
+}
+</style>
+```
+在父组件中引入，使用，传入 rating：
+```vue
+<template>
+  <RatingStar :rating='item.rating'></RatingStar>
+</template>
+
+<script>
+import RatingStar from '../fun/RatingStar.vue'
+export default {
+  components: { RatingStar }
+}
+</script>
+```
 
 
 # 目标功能
@@ -326,10 +498,10 @@ export default {
 - [x] 选择城市
 - [x] 搜索地址
 - [x] 展示所选地址附近商家列表
-- [ ] 搜索美食
-- [ ] 根据距离、销量、评分、特色菜、配送方式等进行排序和筛选
 
-<!-- - [ ] 餐馆视频列表页
+<!-- - [ ] 搜索美食
+- [ ] 根据距离、销量、评分、特色菜、配送方式等进行排序和筛选
+- [ ] 餐馆视频列表页
 - [ ] 购物车功能
 - [ ] 店铺评价页面
 - [ ] 单个食品详情页面
