@@ -248,3 +248,76 @@ UDP Socket：
 - 私密性
 - 数据完整性
 - 端到端的鉴别
+
+## Web 和 HTTP
+Web 页由一些对象组成，，对象可以是 HTML 文件， JPEG 图像，Java 小程序等，通过 URL 对每个对象进行引用。
+
+URL格式：  
+协议 - 用户：口令 - 主机名 - 路径名 - 端口
+
+```html
+Prot://user:psw@www.someSchool.edu/someDept/pic.gif:port
+```
+
+### HTTP
+
+HTTP 即超文本传输协议，是 Web 的应用层协议，使用客户/服务器模式，客户端负责请求、接收和显示 Web 对象（各种浏览器），服务端负责对请求进行相应并发送浏览器（服务器）。  
+HTTP 是无状态的，使用 TCP ，客户发起 TCP 连接默认端口号为 80，在浏览器交换 HTTP 报文之后连接关闭。
+
+> 无状态：服务器不需要维护客户端的状态，无记忆  
+
+**往返时间 (RTT, round-trip time)**：一个小的分组从客户端到服务器再回到服务端的时间（字节数很少可以忽略传输时间）  
+**响应时间**：包括一个 RTT 发起 TCP 连接，一个 RTT 请求 HTTP 并等待 HTTP 响应 ，文件传输时间（这样一个大的对象传输时间无法忽略）= 2 * RTT + 传输时间
+
+HTTP 请求格式：
+- 请求报文格式：请求行、首部行、换行回车符，表示报文结束
+    ```
+    GET /somedir/page,html HTTP/1.1
+    Host: www.someschool.edu
+    User-agent: Mozilla/4.0
+    Connection: close
+    Accept-language: fr  
+    （一个额外的换行回车符）
+    ```
+- 响应报文：状态行（协议版本/状态码/响应状态信息）、首部行、数据（如请求的 HTML 文件）
+
+状态码：
+- 200 Ok
+- 301 Move Permanently
+- 400 Bad Request
+- 404 Not Found
+- 505 Http Version not Supported
+
+
+#### HTTP 1.0
+请求方式：
+- GET
+- POST
+- HEAD：要求服务器在响应报文中不包含请求对象 -> 故障跟踪
+
+#### HTTP 1.1
+默认连接方式：流水方式的持久 HTTP 连接，客户端向客户端连接请求，建立连接之后默认不关闭连接。客户端遇到一个引用对象就立即产生一个请求，所有引用对象指花费一个 RTT 是有可能的。
+
+请求方式；
+- GET/POST/HEAD
+- PUT：实体主体中的文件上载到 URL 字段规定的路径
+- DELETE：删除 URL 字段规定的文件
+
+### Cookie
+可以使连接有状态的小甜饼～  
+
+1. 在 HTTP 响应报文中有一个 cookie 的首部行
+2. 请求报文中含有一个 cookie 的首部行
+3. 用户端系统中保留一个 cookie 文件
+4. 在 web 站点有一个后端数据库
+
+能做什么呢？举例：
+- 用户验证
+- 购物车
+- 个性化推荐
+
+缺点是隐私性问题，cookie 不够安全，会暴露你的访问行为，被攻击后信息也会暴露
+
+### Web 缓存
+不访问服务器就满足用户的需求，可以降低服务器的负载，降低客户端请求响应时间，通常由 ISP 安装
+
