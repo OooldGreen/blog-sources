@@ -380,3 +380,23 @@ Type:
 - CNAME - name 为规范名字的别名
 - NS - name 域名
 - MX - name为对应 mail 服务器名字
+
+## P2P 模式应用
+Peer to Peer，每个节点既是客户端也是服务端，是**一类应用**
+
+优点：分布式流量，可靠性较高
+
+用例：
+- 文件的分发
+- 流媒体点播
+- VoIP (Skype) 实时音频视频
+
+overlay：客户端配置文件中给出一个列表，记录若干个经常运行的节点的 IP，向这些节点按照协议发出连接报文，在响应中随机选取节点建立起 overlay
+
+非结构化 P2P：覆盖网络 (overlay) 中节点间的关系是随意的  
+- 集中化目录
+- 完全分布式：限制范围的泛洪 (flooding) 查询，例如 TTL，进行标记
+- 混合体：例如 BitTorrent
+
+结构化 (DHT, Distributed Hash Table) P2P：节点间可以构成有序的 overlay（树、环等） 
+
