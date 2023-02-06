@@ -400,3 +400,9 @@ overlay：客户端配置文件中给出一个列表，记录若干个经常运�
 
 结构化 (DHT, Distributed Hash Table) P2P：节点间可以构成有序的 overlay（树、环等） 
 
+## CDN (Content Distribution/Delivery Networks)
+多媒体流化服务：DASH (Dynamic, Adaptive Streaming over HTTP)
+
+智能客户端：客户端自适应决定 —— 什么时候请求块，请求什么编码速率的视频块，哪里请求块
+
+CDN: 部署缓存节点，存储服务内容，就近为用户提供服务

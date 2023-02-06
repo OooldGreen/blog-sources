@@ -83,7 +83,7 @@ hugo new theme <THEMENAME>
 ## 生成我的第一支博客
 在我的博客文件夹下输入以下代码：
 ```text
-hugo new post/my-first-post.md
+hugo new posts/my-first-post.md
 ```
 
 > Tips:
