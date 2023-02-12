@@ -21,7 +21,7 @@ body {
   font-weight: 300;
 }
 pre, code {
-  font-family: 'FreeMono', sans-serif;
+  font-family: 'FreeMono', monospace;
   -webkit-text-size-adjust: none;
 }
 /* h1, h2, h3, h4, h5, h6,

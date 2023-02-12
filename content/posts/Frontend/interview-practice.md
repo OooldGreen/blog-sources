@@ -89,19 +89,19 @@ math: true
     102 Processing: 处理中，通常需要很长时间才能完成请求时发送
 - 2: 请求成功  
 - 3: 重定向  
-    301 Moved Permanently: 
+    301 Moved Permanently: 资源（网页等）永久被移动至其他 URL，之后任何新的请求都使用新的 URL 替代
 
-    302 Found: 
+    302 Found: 临时移动，客户端应使用原有 URL
 
-    304 Not Modified:
+    304 Not Modified: 所请求的资源未修改过
 - 4: 请求失败，客户端错误  
-    400 Bad Request: 
+    400 Bad Request: 客户端请求语法错误，服务器无法理解
 
-    404 Not Found: 
+    404 Not Found: 无法找到资源
 - 5: 请求失败，服务端错误  
-    500 Internal Server Error: 
+    500 Internal Server Error: 通用错误信息，服务器遇到了未曾预料到的情况，无法完成请求
 
-    502 Bad Gateway: 
+    502 Bad Gateway: 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应
 
 ## 1.5 用户登录认证
 ### Cookie 和 Session
