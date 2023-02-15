@@ -85,8 +85,10 @@ const routes = [
 ```
 
 ### 渐变消失出现动画
-```js
-<transition name="fade"></transition>
+```html
+<transition name="fade">
+    <section  class="license-img-container"></section>
+</transition>
 ```
 在 style 中添加动画
 ```css
@@ -98,6 +100,14 @@ const routes = [
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.license-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
 }
 ```
 
