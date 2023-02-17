@@ -111,6 +111,78 @@ const routes = [
 }
 ```
 
+
+## 点击‘...’出现提示气泡效果
+气泡效果如下图：
+![气泡效果](/image/frontend/vue-elm/bubble-css.png)
+
+制作方法是内容为一个矩形盒子，右上角小三角是加伪元素 `::after`，做一个正方形旋转45度再定位得来。代码如下（样式用scss写的）：
+```html
+<header class="menu-list-header">
+    <span class="menu-header-right" @click="showMenuDes(index)">...</span>
+    <div class="menu-header-des-tip" v-if="showMenuDesIndex == index">
+        <span>{{item.name}}</span>
+        {{item.description}}
+    </div>
+</header>
+```
+```scss
+.menu-list-header {
+    .menu-header-right {
+        color: #666;
+        padding-right: 0.5rem;
+    }
+    .menu-header-des-tip {
+        position: absolute;
+        top: 1.7rem;
+        right: 0.5rem;
+        width: 65%;
+        background-color: #39373a;
+        opacity: 0.9;
+        font-size: 0.7rem;
+        color: #fff;
+        border-radius: 0.3rem;
+        padding: 0.6rem 0.5rem 0.6rem;
+        span {
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 0.3rem;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: -0.2rem;
+            right: 0.18rem;
+            background-color: #39373a;
+            width: 0.7rem;
+            height: 0.7rem;
+            transform: rotate(45deg);
+        }
+    }
+}
+```
+
+js代码如下：
+```js
+data() {
+    return {
+        showMenuDesIndex: null, // 显示菜单标题描述
+    }
+},
+methods: {
+    showMenuDes(index) {
+        if(this.showMenuDesIndex == index) {
+            this.showMenuDesIndex = null
+        } else {
+            this.showMenuDesIndex = index
+        }
+    }
+}
+```
+
+后面“新品”标识也可以这样做，将正方形方块旋转45度定位到商品盒子右上角，隐藏溢出即可
+
 # 食品详情页面
 
 # 目标功能
