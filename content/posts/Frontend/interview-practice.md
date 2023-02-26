@@ -329,7 +329,9 @@ BigInt 和 Symbol 是 ES6 新的数据类型，Symbol 创建一个不重复的�
 1. typeof：只能区分基本数据类型，引用数据类型除了 function 会返回 function，其余都是 object
 2. constructor：用于引用数据类型，检测方法是获取实例的构造函数判断和某个类是否相同，如果相同就说明该数据是符合那个数据类型的，这种方法不会把原型链上的其他类也加入进来，避免了原型链的干扰。
 3. instanceof：用于引用数据类型，检测数据类型是否在当前变量的原型链上
-4. Object.prototype.toString.call()：适用于所有数据类型
+4. Object.prototype.toString.call()：适用于所有数据类型  
+    - toString 这个方法是用于返回当前调用者的对象类型的，返回`[object [class]]`
+    - call 是为了让 Object.prototype.toString 方法指向括号内指定的数据, 否则调用者是 Objec.prototype，返回永远都是`[object Object]`
 
 ### 数组方法
 增删改查：push、pop、shift、unshift、concat、join、reverse、sort、map、forEach、reduce、slice、splice、forEach、filter、indexOf
@@ -730,12 +732,85 @@ document.addEventListener('scroll', better_scroll)
 ```
 
 ## 2.14 函数柯里化
-接收的多个参数转化为一个一个的参数的函数
+接收的多个参数转化为一个一个的参数的函数，指将一个函数从可调用的 `f(a, b, c)` 转换为可调用的 `f(a)(b)(c)`。
 
 ## 2.15 请求方式
+
 ### fetch 请求
 
+fetch 请求是基于 Promise 实现，最简单的 fetch 请求只需要带一个参数，就是请求的路径。fetch 请求会返回一个 Promise
+
+```js
+fetch('urlxxx').then(...)
+```
+
+用 `await` 写更清晰，必须用 `try...catch` 捕获错误
+```js
+async function getData() {
+    try {
+        const response = await fetch('urlxxx');
+        // 得到 json 对象
+        return await response.json();
+    } catch(error) {
+        thorw new Error(error);
+    } 
+}
+```
+
+`response.status` 是 `200` 才会被认定为请求成功
+
+```js
+async function getData() {
+    let response = await fetch('xxx');
+    if(response.status === 200) {
+        // 获取文本数据
+        return await response.text();
+    } else {
+        throw new Error(response.statusText);
+    }
+}
+```
+
+一些定制 HTTP 请求的参数：
+```js
+const response = await fetch(url, {
+    // 请求方法，可以是 POST，GET 等
+    methods: "POST",
+    // 请求数据的格式
+    headers: {
+        "Content-Type": "application/json", //'application/x-www-form-urlencoded'
+    },
+    // 有新版本才使用服务器资源否则使用缓存，默认为 "default"，也就是先查找缓存
+    cache: "no-cache",
+    // 默认允许跨域请求，不允许是 "no-cors"，只允许同源是 "same-origin"
+    mode: "cors",
+    // 默认同源发送 cookie，还有参数 "include" 和 "omit"，分别为一律发送和一律不发送
+    credentials: "same-origin",
+})
+```
+
+
 ### ajax 请求
+ajax 请求在`XMLHttpRequest`的基础上实现。`XMLHttpRequest`请求可以在不刷新整个页面的情况下更新数据。 
+
+使用 Ajax 一共三步：创建对象、发送请求、监听响应
+
+```js
+// 创建 ajax 对象
+var xhr = new XMLHttpRequest();
+/** 配置请求，三个参数 method、url、async
+ *  method: 可以是 get 或 post
+ *  url：请求路径
+ *  async：true 或 false，是否异步
+**/
+xhr.open("get", "xxx", true)
+// 发送请求，post 请求可以在其中放入数据
+xhr.send();
+// 监听响应
+xhr.onload = function() {
+    console.log(xhr.responseText);
+}
+```
 
 ## 2.16 继承
 - 原型链继承
@@ -748,7 +823,7 @@ document.addEventListener('scroll', better_scroll)
 
 ## 2.17 设计模式
 ### 创建型
-- 单例模式
+- 单例模式：保证类的实例只有一个
 - 建造者模式
 
 ### 结构型
