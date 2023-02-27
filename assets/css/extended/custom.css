@@ -20,6 +20,25 @@ body::-webkit-scrollbar-thumb {
   margin-top: calc(var(--gap)*3.5);
 }
 
+/* 代码块最大高度 */
+.post-content .highlight {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.post-content .highlight table {
+  margin-bottom: 0;
+}
+
+/* 代码滚动条设置 */
+.post-content .highlight::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.post-content .highlight::-webkit-scrollbar-thumb {
+  background: #717175;
+  border: 2px solid var(--hljs-bg);
+}
+
+
 /* nav 导航栏 ------------------------------ */
 .nav {
   position: fixed;

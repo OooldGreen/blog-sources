@@ -54,6 +54,42 @@ function test(a) {
 test(10)
 ```
 
+```js
+// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!afunction test(a) function test(a) function test(a) function')
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)// 这是一段代码
+function test(a) {
+    console.log('hello World!', a)
+}
+test(10)
+````
+
 这是一行公式：
 $$ 
 \sum_{\substack{i=1}}^{n}a_{n} = a\frac{1-q^{n}}{1-q}
