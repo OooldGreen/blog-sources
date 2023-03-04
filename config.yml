@@ -17,10 +17,10 @@ minify:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Shirley's Cabin
+  title: Snow Cabin
   description: "Records for frontend learning and daily life."
   keywords: [Blog, Portfolio, PaperMod, Hugo, Frontend, CS]
-  author: Shirley
+  author: Silva
   # author: ["Me", "You"] # multiple authors
   images: [""]
   DateFormat: "January 2, 2006"
@@ -67,7 +67,7 @@ params:
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: Shirley's Cabin
+    title: Snow Cabin
     subtitle: "This is subtitle"
     imageUrl: "<img location>"
     imageWidth: 120
@@ -82,7 +82,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Home"
-    Content: Welcome to Shirley's blog!
+    Content: 属于自己的房间❤️‍🔥
 
   # 社交链接
   socialIcons:

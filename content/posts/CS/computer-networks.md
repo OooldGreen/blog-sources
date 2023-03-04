@@ -408,9 +408,34 @@ overlay：客户端配置文件中给出一个列表，记录若干个经常运�
 CDN: 部署缓存节点，存储服务内容，就近为用户提供服务
 
 ## Socket 编程
-### TCP 套接字编程
+socket：分布式应用进程之间的门，传输层协议提供的端到端服务接口
 
-过程：
-1. 服务器先**运行**，创建欢迎 socket，和本地端口**捆绑**，在欢迎 socket 上阻塞式**等待用户连接**
-2. 客户端主动和服务端建立连接
-3. 
+**TCP 套接字编程**
+- 服务器端  
+    1. 服务器先运行，创建欢迎 socket
+    2. 和本地端口捆绑 bind
+    3. 建立 connetionSocket，连接 welcomeSocket，阻塞式等待用户连接
+- 客户端 
+    4. 客户端创建 clientSocket，隐式绑定（操作系统自动分配）  
+    5. 主动和服务端建立连接，connect(ClientSocket, sad)，记录服务器 IP 和端口
+- 连接通信  
+    6. 服务器端接受连接，返回一个有效值，解除阻塞，建立连接  
+    7. 客户端发送请求 send request  
+    8. 服务器调用 read 接收，write 回复  
+    9. 客户端从服务器读取 read reply  
+
+
+**UDP Socket 编程**
+- 没有握手，服务器和客户端没有连接
+- 传送的数据可能乱序也可能丢失
+1. 建立 serverSocket
+2. bind
+3. readfrom，等待客户端发送数据
+4. 客户端创建 clientSocket
+5. 客户端隐式 bind
+6. 客户端 sendto 发送数据
+7. 服务端 readfrom 解除阻塞，sendto 返回数据
+8. 客户端 read reply from 读取服务端返回的数据
+9. 关闭 socket
+
+# 传输层
