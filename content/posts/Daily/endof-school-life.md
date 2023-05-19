@@ -2,8 +2,8 @@
 title: "毕业" #标题
 date: 2023-05-19T22:15:34+08:00 #创建时间
 lastmod: 2023-05-19T22:15:34+08:00 #更新时间
-categories: [""]
-tags: [""]
+categories: ["Daily"]
+tags: ["随便写写"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 # draft: false # 是否为草稿
