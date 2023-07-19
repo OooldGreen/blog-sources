@@ -42,3 +42,19 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 {{< figure src="/image/daily/cloud-guanting/202307172024.JPG" title="7月17日晚上，黄河边，天空是粉色的">}}
 
+---
+7.18
+
+棉花云超好看。
+
+{{< figure src="/image/daily/cloud-guanting/202307181806.JPG" title="">}}
+
+{{< figure src="/image/daily/cloud-guanting/202307181808.jpg" title="">}}
+
+---
+
+7.19
+
+有太阳，不太晴，有一层薄雾，无云。
+
+下午下雨啦，拍出的照片灰灰的，对焦也不太对，还要多学习。
