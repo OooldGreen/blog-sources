@@ -65,3 +65,10 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 {{< figure src="/image/daily/cloud-guanting/2023071904.JPG" title="辣椒小白花儿">}}
 {{< figure src="/image/daily/cloud-guanting/2023071905.JPG" title="菜园子里的西瓜长老大了">}}
 {{< figure src="/image/daily/cloud-guanting/2023071906.JPG" title="小水洼的倒影，想把焦对在云上的">}}
+
+朋友在祁连，拍到了一条特别完整的彩虹🌈，下面是绿油油的小山丘。刷到七彩丹霞的彩虹，好看死了。
+
+---
+
+7.20
+
