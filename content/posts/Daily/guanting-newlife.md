@@ -40,14 +40,14 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 {{< figure src="/image/daily/cloud-guanting/202307171935.JPG" title="7月17日晚上，乱入一朵小花">}}
 
-{{< figure src="/image/daily/cloud-guanting/202307172024.JPG" title="7月17日晚上，黄河边，天空是粉色的">}}
+{{< figure src="/image/daily/cloud-guanting/202307172024.JPG" title="7月17日晚上，黄河边，云是粉色的">}}
 
 ---
 7.18
 
-棉花云超好看。
+棉花云超好看，但是拍出来有点儿灰。
 
-{{< figure src="/image/daily/cloud-guanting/202307181806.JPG" title="">}}
+{{< figure src="/image/daily/cloud-guanting/202307181806.JPG" title="这里的山像是被捏出来的一样">}}
 
 {{< figure src="/image/daily/cloud-guanting/202307181808.jpg" title="">}}
 
@@ -58,3 +58,10 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 有太阳，不太晴，有一层薄雾，无云。
 
 下午下雨啦，拍出的照片灰灰的，对焦也不太对，还要多学习。
+
+{{< figure src="/image/daily/cloud-guanting/2023071901.JPG" title="晚霞又是粉红色了">}}
+{{< figure src="/image/daily/cloud-guanting/2023071902.JPG" title="">}}
+{{< figure src="/image/daily/cloud-guanting/2023071903.JPG" title="下雨之后的云">}}
+{{< figure src="/image/daily/cloud-guanting/2023071904.JPG" title="辣椒小白花儿">}}
+{{< figure src="/image/daily/cloud-guanting/2023071905.JPG" title="菜园子里的西瓜长老大了">}}
+{{< figure src="/image/daily/cloud-guanting/2023071906.JPG" title="小水洼的倒影，想把焦对在云上的">}}
