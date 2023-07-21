@@ -72,3 +72,16 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 7.20
 
+套了个links预设拍了天空，很喜欢这个质感。
+
+傍晚的时候睡了一觉，起来云很壮观，电闪雷鸣，但是只下了几滴雨。想碰见个大雨真难呀。晚上躁点实在很多，三脚架大概必不可少了吧。
+
+{{< figure src="/image/daily/cloud-guanting/2023072001.JPG" title="喜欢这个天空的质感，虽然这好像是绿叶预设">}}
+{{< figure src="/image/daily/cloud-guanting/2023072002.JPG" title="楼下晾着的被子" width="50%">}}
+{{< figure src="/image/daily/cloud-guanting/2023072003.JPG" title="这根碍事的柱子终于被我拍了" width="50%">}}
+{{< figure src="/image/daily/cloud-guanting/2023072004.JPG" title="云和山的缝隙只剩下一点点，透出亮光">}}
+{{< figure src="/image/daily/cloud-guanting/2023072005.JPG" title="像水墨画一样">}}
+
+---
+
+7.21
