@@ -85,3 +85,15 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 ---
 
 7.21
+
+{{< figure src="/image/daily/cloud-guanting/2023072101.JPG" title="又拍了这根杆子，蓝色的天好纯净" width="50%">}}
+{{< figure src="/image/daily/cloud-guanting/2023072102.JPG" title="蓝天套了预设所以不是特别蓝的蓝，今天的云薄薄的" width="50%">}}
+
+---
+
+7.22
+
+今天拍的长焦照片还是雾蒙蒙的，我知道是远处有雾了，不能怨我！稍微去了雾，所以莫名其妙多了个水印哈哈。这儿的天，这儿的云和山都太好看了，总也看不够。
+
+{{< figure src="/image/daily/cloud-guanting/2023072201.JPG" title="棉花云和下面绵延的山">}}
+{{< figure src="/image/daily/cloud-guanting/2023072202.JPG" title="一直特别想拍这个山，但总有电线杆挡住。镜头再拉近点，大自然像捏橡皮泥一样捏出这样的山，简直跟苹果地图的地势一模一样">}}
