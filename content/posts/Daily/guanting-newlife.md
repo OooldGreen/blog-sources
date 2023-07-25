@@ -97,3 +97,26 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 {{< figure src="/image/daily/cloud-guanting/2023072201.JPG" title="棉花云和下面绵延的山">}}
 {{< figure src="/image/daily/cloud-guanting/2023072202.JPG" title="一直特别想拍这个山，但总有电线杆挡住。镜头再拉近点，大自然像捏橡皮泥一样捏出这样的山，简直跟苹果地图的地势一模一样">}}
+
+---
+
+7.23
+
+{{< figure src="/image/daily/cloud-guanting/20230723.JPG" title="阴天，很多云，壮观">}}
+
+---
+
+7.24
+
+{{< figure src="/image/daily/cloud-guanting/20230724.jpg" title="加了日系滤镜，喜欢～拍了另一个但更喜欢这个预设">}}
+
+---
+
+7.25
+
+{{< figure src="/image/daily/cloud-guanting/20230725.jpg" title="我发现早上总是很少的云，有雾，看不太清山">}}
+
+---
+
+7.26
+
