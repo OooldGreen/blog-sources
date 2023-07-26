@@ -114,6 +114,8 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 7.25
 
+终于带了相机遛弯，天空不负期待，红土山没拍到，但是这种不知道叫什么的云太漂亮了。一弯月牙远远的挂在天上。
+
 {{< figure src="/image/daily/cloud-guanting/2023072501.jpg" title="我发现早上总是很少的云，有雾，看不太清山">}}
 {{< figure src="/image/daily/cloud-guanting/2023072502.JPG" title="下午出现了乌云，分层了，有种压迫感">}}
 {{< figure src="/image/daily/cloud-guanting/2023072503.JPG" title="晚上出门遛弯看到的">}}
