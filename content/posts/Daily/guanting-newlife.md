@@ -114,7 +114,11 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 7.25
 
-{{< figure src="/image/daily/cloud-guanting/20230725.jpg" title="我发现早上总是很少的云，有雾，看不太清山">}}
+{{< figure src="/image/daily/cloud-guanting/2023072501.jpg" title="我发现早上总是很少的云，有雾，看不太清山">}}
+{{< figure src="/image/daily/cloud-guanting/2023072502.JPG" title="下午出现了乌云，分层了，有种压迫感">}}
+{{< figure src="/image/daily/cloud-guanting/2023072503.JPG" title="晚上出门遛弯看到的">}}
+{{< figure src="/image/daily/cloud-guanting/2023072504.JPG" title="再晚一些，到了镇子上，云就成了粉色了">}}
+{{< figure src="/image/daily/cloud-guanting/2023072505.JPG" title="随手拍了一张月亮，后悔没带长焦！不然一定绝了！">}}
 
 ---
 
