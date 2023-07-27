@@ -126,3 +126,8 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 
 7.26
 
+下雨啦，天气凉爽下来。
+
+{{< figure src="/image/daily/cloud-guanting/2023072601.JPG" title="早一些时候拍的">}}
+{{< figure src="/image/daily/cloud-guanting/2023072602.JPG" title="绕不开这根杆子干脆就拍进来">}}
+{{< figure src="/image/daily/cloud-guanting/2023072603.JPG" title="中间厚厚的云层，到了边缘就淡淡散开">}}
