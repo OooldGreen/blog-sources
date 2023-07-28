@@ -131,3 +131,13 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 {{< figure src="/image/daily/cloud-guanting/2023072601.JPG" title="早一些时候拍的">}}
 {{< figure src="/image/daily/cloud-guanting/2023072602.JPG" title="绕不开这根杆子干脆就拍进来">}}
 {{< figure src="/image/daily/cloud-guanting/2023072603.JPG" title="中间厚厚的云层，到了边缘就淡淡散开，像在水里化开了药剂">}}
+
+---
+
+7.27
+
+看见像雾一样散开缠绕在山四周的云，溜回去换了长焦镜头拍。回来没多大会儿就下大了。
+
+{{< figure src="/image/daily/cloud-guanting/2023072701.JPG" title="神奇的云">}}
+{{< figure src="/image/daily/cloud-guanting/2023072702.JPG" title="">}}
+{{< figure src="/image/daily/cloud-guanting/2023072703.JPG" title="时晴时阴的天气">}}
