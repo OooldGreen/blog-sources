@@ -141,3 +141,13 @@ weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就�
 {{< figure src="/image/daily/cloud-guanting/2023072701.JPG" title="神奇的云">}}
 {{< figure src="/image/daily/cloud-guanting/2023072702.JPG" title="">}}
 {{< figure src="/image/daily/cloud-guanting/2023072703.JPG" title="时晴时阴的天气">}}
+
+---
+
+7.28
+
+
+{{< figure src="/image/daily/cloud-guanting/2023072801.JPG" title="">}}
+{{< figure src="/image/daily/cloud-guanting/2023072802.JPG" title="终于见到一小团一小团的云，在那么近的地方（看久了密恐呀">}}
+{{< figure src="/image/daily/cloud-guanting/2023072803.JPG" title="柱子的背景也有白白的云啦，发现不加滤镜更好呢" width="50%">}}
+{{< figure src="/image/daily/cloud-guanting/2023072804.JPG" title="尼康的绿色拍出来也好漂亮啊" width="50%">}}
