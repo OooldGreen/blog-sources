@@ -3,7 +3,7 @@ title: "Starry Sky" #标题
 date: 2023-08-14T10:21:12+08:00 #创建时间
 lastmod: 2023-08-26T11:42:12+08:00 #更新时间
 categories: ["风景", "Scenery Photography"]
-tags: ["Starry Sky", "星空", "中国西北"]
+tags: ["starry sky", "星空", "中国西北"]
 description: "官厅的星空。The starry sky in Guanting." #描述
 weight: 1 # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 # draft: false # 是否为草稿

@@ -3,7 +3,7 @@ title: "青甘大环线游记" #标题
 date: 2023-06-30T22:05:28+08:00 #创建时间
 lastmod: 2023-07-07T22:05:28+08:00 #更新时间
 categories: ["Travel"]
-tags: ["Travel", "NorthWest of China", "中国西北", "游记"]
+tags: ["travel", "northwest of China", "中国西北", "游记"]
 description: "9 days of traveling in northwest of China" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 # draft: false # 是否为草稿
