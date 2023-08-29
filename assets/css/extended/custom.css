@@ -14,7 +14,7 @@ html{
   width: 12px;
 }
 .list::-webkit-scrollbar-thumb  {
-  border: 3px solid var(--theme);
+  border: 3px solid var(--theme)!important;
 }
 ::-webkit-scrollbar-track-piece {
   background-color: var(--theme);
