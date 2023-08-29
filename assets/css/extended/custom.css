@@ -10,11 +10,30 @@ html{
 }
 
 /* 滚动条设置 */
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+::-webkit-scrollbar {
+  width: 12px;
+}
+.list::-webkit-scrollbar-thumb  {
+  border: 3px solid var(--theme);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: var(--theme);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--third);
+  border-radius: var(--radius);
+  border: 3px solid var(--theme);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
+}
+/* 代码滚动条 */
+.post-content .highlight::-webkit-scrollbar-track-piece,
+.post-content .lntable::-webkit-scrollbar-track-piece {
+  background: var(--hljs-bg)!important;
 }
 
-/* 设置博客内容宽度 */
+/* 博客内容宽度 */
 .main {
   max-width: calc(var(--main-width) + var(--gap) * 6);
   margin-top: calc(var(--gap)*3.5);
