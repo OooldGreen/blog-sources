@@ -1,9 +1,9 @@
 ---
-title: "日语语法" #标题
+title: "日语语法汇总" #标题
 date: 2023-08-26T15:28:12+08:00 #创建时间
 lastmod: 2023-08-26T15:28:12+08:00 #更新时间
-categories: ["日语", "Japanese"]
-tags: ["语法", "grammar"]
+categories: ["Japanese"]
+tags: ["grammar", "learning language"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 # draft: false # 是否为草稿
@@ -21,6 +21,8 @@ weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默
 ---
 
 日语语法学习
+---
+听不懂暂停了，学完再来总结吧
 
 <!--more-->
 
@@ -142,4 +144,3 @@ weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默
 
 昨日は寒かった。
 
-222222

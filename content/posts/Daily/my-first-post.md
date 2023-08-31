@@ -3,7 +3,7 @@ title: "My First Post"
 date: 2022-10-16
 # weight: 1
 # aliases: ["/first"]
-tags: ["Blog", "Personal"]
+tags: ["随便写写"]
 categories: ["Daily"]
 # author: "Shirley"
 # author: ["Me", "You"] # multiple authors

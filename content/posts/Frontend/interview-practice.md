@@ -7,7 +7,7 @@ draft: false
 keywords: ["interview"]
 description: ""
 tags: ["interview", "js", "Vue", "CS"]
-categories: ["Frontend"]
+categories: ["Frontend", "CS"]
 author: ""
 math: true
 

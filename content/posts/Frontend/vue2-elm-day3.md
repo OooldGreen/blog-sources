@@ -6,7 +6,7 @@ draft: false
 keywords: ["vue", "elm", "项目记录"]
 description: ""
 tags: ["vue2", "项目记录"]
-categories: ["vue", "项目记录"]
+categories: ["vue", "项目记录", "CS"]
 author: ""
 ---
 第三天啦，加油！

@@ -2,7 +2,7 @@
 title: "礼物" #标题
 date: 2023-02-21T20:16:36+08:00 #创建时间
 lastmod: 2023-02-21T20:16:36+08:00 #更新时间
-categories: ["Daily"]
+categories: ["Daily", "Entertainment"]
 tags: ["好吃好喝"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序

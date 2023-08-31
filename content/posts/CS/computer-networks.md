@@ -2,8 +2,8 @@
 title: "计算机网络" #标题
 date: 2022-11-14T15:57:02+08:00 #创建时间
 lastmod: 2022-11-28T19:00:00+08:00 #更新时间
-categories: ["CS"]
-tags: ["CS","Class Note",'Computer Network']
+categories: ["CS", "课堂笔记"]
+tags: ["class note",'computer network']
 description: "Computer Network is a MOOC class." #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 draft: false # 是否为草稿

@@ -3,9 +3,9 @@ title: "开 学 啦！"
 date: 2023-02-06
 lastmod: 2023-02-06
 draft: false
-keywords: ["daily","blog"]
+keywords: ["daily"]
 description: ""
-tags: ["blog", "personal"]
+tags: [“随便写写”]
 categories: ["Daily"]
 author: ""
 ---

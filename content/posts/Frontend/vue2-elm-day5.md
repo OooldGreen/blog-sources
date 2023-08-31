@@ -2,7 +2,7 @@
 title: "Vue2 Elm Day5" #标题
 date: 2023-02-13T20:17:33+08:00 #创建时间
 lastmod: 2023-02-13T20:17:33+08:00 #更新时间
-categories: ["vue", "项目记录"]
+categories: ["vue", "项目记录", "CS"]
 tags: ["vue2", "项目记录"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序

@@ -6,7 +6,7 @@ draft: false
 keywords: ["frontend", "promise", "javascript", "es6"]
 description: ""
 tags: ["JS", "promise"]
-categories: ["Frontend"]
+categories: ["Frontend", "CS"]
 author: ""
 
 ---

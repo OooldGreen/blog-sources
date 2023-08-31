@@ -2,8 +2,8 @@
 title: "云的形状❤️" #标题
 date: 2023-07-18T11:56:29+08:00 #创建时间
 lastmod: 2023-08-01T11:56:29+08:00 #更新时间
-categories: ["风景","Scenery Photography"]
-tags: ["风景","云","cloud","scenery"]
+categories: ["Scenery Photography", "Daily"]
+tags: ["cloud","scenery", "northwest of China", "中国西北"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示 排序，不填就默认按时间排序
 # draft: false # 是否为草稿

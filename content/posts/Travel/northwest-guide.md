@@ -2,8 +2,8 @@
 title: "西北大环线旅游指南" #标题
 date: 2023-07-04T16:01:45+08:00 #创建时间
 lastmod: 2023-07-04T16:01:45+08:00 #更新时间
-categories: ["Travel"]
-tags: ["travel", "guide", "旅游指南"]
+categories: ["旅游指南", "Travel", "Travel Guidance"]
+tags: ["travel", "guide","中国西北", "northwest of China"]
 description: "" #描述
 weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 # draft: false # 是否为草稿
