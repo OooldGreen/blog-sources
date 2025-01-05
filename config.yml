@@ -2,7 +2,7 @@ baseURL: "https://oooldgreen.github.io/"
 
 title: Snow Cabin
 enableEmoji: true
-paginate: 8
+paginate: 10
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -83,7 +83,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Home"
-    Content: 属于自己的房间❤️‍🔥
+    Content: 属于自己的房间💙
 
   # 社交链接
   socialIcons:

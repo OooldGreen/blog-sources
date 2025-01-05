@@ -7,26 +7,26 @@
 /* 配色: #455A64 #607D8B #CFD8DC #212121 #BDBDBD #795548------------------------- */
 /* light模式 博客配色 */
 :root {
-  --radius: 5px;
+  --radius: 0px;
   /* post背景颜色 */
-  --theme: #607D8B;
+  --theme: #fff;
   /* 博客卡片背景颜色 */
-  --entry: #CFD8DC;
+  --entry: #efefef;
   /* 网页字体颜色 */
-  --primary: #212121; 
-  --secondary: #757575;
-  --third: #bdbdbd;
+  --primary: #002FA7; 
+  --secondary: #002fa7;
+  --third: #9d9d9d;
   /* 搜索/返回顶部按钮背景颜色 */
-  --tertiary: #F7B733;
+  --tertiary: #cbcbcb;
   /* post内容字体颜色 */
   --content: #212121;
   /* --hljs-bg: rgb(28, 29, 33); */
   /* 代码/tag背景颜色 */
-  --code-bg: #bdbdbd;
+  --code-bg: #cbcbcb;
   /* 边框颜色 */
-  --border: #455a64;
+  --border: #002FA7;
   /* 进度条颜色 */
-  --progress: #F7B733;
+  --progress: #ffbf1e;
 }
 
 /* ----------------------------------------------- */
@@ -35,21 +35,20 @@
 
 .dark {
   /* post背景颜色 */
-  --theme: #434446;
-  /* 博客卡片背景颜色 */
-  --entry: #595a5c;
+  --theme: #212121;
+  --entry: #212121;
   /* 网页字体颜色 */
-  --primary: #ebe8e1;
-  --secondary: #dedad2;
+  --primary: #efefef;
+  --secondary: #9d9d9d;
+  --third: #cbcbcb;
   /* tag等背景颜色 */
-  --tertiary: #dedad2;
+  --tertiary: #002FA7;
   /* post内容字体颜色 */
-  --content: #ebe8e1;
+  --content: #cbcbcb;
   /* --hljs-bg: rgb(46, 46, 51); */
   /* 代码背景颜色 */
-  --code-bg: #6b6e77;
-  --border: #dedad2;
-  --third: #595a5c;
+  --code-bg: #212121;
+  --border: #9d9d9d;
 }
 .dark .post-tags a:hover {
   background-color: var(--theme);
@@ -68,7 +67,7 @@
 }
 /* home下方小字颜色 */
 .home-info .entry-content {
-  color: var(--entry);
+  color: var(--secondary);
 }
 /* home list卡片背景颜色 */
 .list {
@@ -88,8 +87,10 @@
 }
 
 /* 搜索图标颜色 */
-.search-link {
-  color: var(--theme);
+.search-link, .top-link {
+  color: var(--third);
+  background: transparent;
+  box-shadow: 0 0 0 0;
 }
 .search-link:hover {
   color: var(--primary);
@@ -118,10 +119,10 @@
 
 .footer,
 .footer .entry-footer {
-  color: var(--tertiary);
+  color: var(--third);
 }
 .footer a {
-  border-bottom-color: var(--tertiary);
+  border-bottom-color: var(--third);
 }
 /************** 主页设置 *********************************/
 
@@ -163,7 +164,7 @@
 /* footer标签颜色 */
 .post-tags a {
   background-color: transparent;
-  border: 1px solid var(--theme);
+  /* border: 1px solid var(--theme); */
 }
 .post-tags a:hover {
   background-color: var(--code-bg);
@@ -189,6 +190,7 @@ th {
 /* tag和category标签颜色 */
 .terms-tags a {
   background-color: var(--entry);
+  border-radius: 0;
 }
 .terms-tags a:hover {
   background-color: var(--tertiary);
