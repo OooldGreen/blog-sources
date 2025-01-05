@@ -1,0 +1,39 @@
+{{- /* Head custom content area start */ -}}
+<!-- 引入字体样式cdn -->
+<!-- 中文字体样式 -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@openfonts/noto-serif-sc_chinese-simplified@1.44.2/index.min.css"> -->
+<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+
+<!-- 英文字体样式 -->
+<!-- <link href="http://fonts.cdnfonts.com/css/latin-modern-math" rel="stylesheet"> -->
+<!-- 代码字体样式 -->
+<link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet">
+
+<!-- 进度条显示 -->
+{{- if .Content }}
+<progress id="content_progress" value="0"></progress>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var winHeight = window.innerHeight,
+            docHeight = document.documentElement.scrollHeight,
+            progressBar = document.querySelector('#content_progress');
+        progressBar.max = docHeight - winHeight;
+        progressBar.value = window.scrollY;
+
+        document.addEventListener('scroll', function () {
+            progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.value = window.scrollY;
+        });
+    });
+</script>
+{{- end}}
+
+<!-- 引入 katex -->
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
+
+{{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
+{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+{{- /* Head custom content area end */ -}}

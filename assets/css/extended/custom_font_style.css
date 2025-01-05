@@ -1,0 +1,92 @@
+/* 
+  博客整体字体样式修改
+*/
+
+/* 字体修改 */
+/* 优先级从高到低 */
+/* 字体顺序：英文Windows macOS/IOS Linux + 中文macOS/IOS Linux Windows + fallback备胎字体*/
+/*  自定义字体，英文在前，中文在后 
+ ** 中文默认字体 
+ ** 英文默认字体 
+ ** 备胎字体
+*/
+/* body {
+  font-family: 'Latin Modern Math', 'Noto Serif SC',   
+               Georgia, -apple-system, 'Nimbus Roman No9 L',
+               'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei',  
+               'WenQuanYi Micro Hei', 'ST Heiti', cursive, sans-serif; 
+} */
+body {
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+pre, code {
+  font-family: 'FreeMono', monospace;
+  -webkit-text-size-adjust: none;
+}
+/* h1, h2, h3, h4, h5, h6,
+div, p, a, span, li, body {
+  font-family: Montserrat;
+} */
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 400 !important;
+}
+a, li {
+  font-weight: 300 !important;
+}
+/* logo字体 */
+.logo a {
+  font-weight: 600 !important;
+}
+/* 表格表头 */
+.post-content table th {
+  font-size: 16px;
+  font-weight: 400;
+}
+.post-content blockquote {
+  border-inline-start: 2px solid var(--secondary);
+}
+.active,
+.post-content figure>figcaption {
+  font-weight: 400 !important;
+}
+
+/* 设置字体自适应大小 */
+@media screen and (max-width: 768px) {
+  html,
+  .toc li {
+    font-size: 15px;
+  }
+  body, h4, h5, h6, p {
+    font-size: 16px !important;
+  }
+}
+
+/* 字体大小设置 */
+.post-title, .post-content h1 {
+  font-size: 2rem;
+}
+
+.post-content h2 {
+  font-size: 1.8rem;
+}
+
+.post-content h3 {
+  font-size: 1.5rem;
+}
+
+.post-content h4 {
+  font-size: 1.2rem;
+}
+
+.post-content h5 {
+  font-size: 1rem;
+}
+
+.post-content h6 {
+  font-size: .85rem;
+}
+.post-content code {
+  font-size: .9rem !important;
+}
+/* ---------------------------------------- */

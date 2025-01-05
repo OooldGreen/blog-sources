@@ -1,0 +1,169 @@
+baseURL: ""
+title: Snow Cabin
+enableEmoji: true
+paginate: 8
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Snow Cabin
+  description: "Records for frontend learning and daily life."
+  keywords: [Blog, Portfolio, PaperMod, Hugo, Frontend, CS]
+  author: Silva
+  # author: ["Me", "You"] # multiple authors
+  images: [""]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowLastMod: true #显示文章更新时间
+  ShowReadingTime: false  # 阅读时间
+  ShowShareButtons: true # 分享按钮
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true # 复制代码按钮
+  ShowWordCount: false # 博客字数
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: false
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true  # 开启评论
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+  math: true # 支持 katex 
+
+  ShareButtons: ["twitter", "reddit", "facebook", "telegram", "whatsapp"] # To customize which share buttons to be enabled on page
+
+  # 配置网站图标
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16:  "/favicon-16x16.png"
+    favicon32x32:  "/favicon-32x32.png"
+    apple_touch_icon:  "<link / absolute url>"
+    safari_pinned_tab:  "<link / absolute url>"
+    # theme_color: '#fff'
+    # msapplication_TileColor: '#fff'
+
+  label:
+    text: "SNOW CABIN"
+    icon: "/snowman.png"
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: Snow Cabin
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Home"
+    Content: 属于自己的房间❤️‍🔥
+
+  # 社交链接
+  socialIcons:
+    - name: github
+      url: "https://github.com/OooldGreen?tab=repositories"
+    - name: twitter
+      url: "https://twitter.com/home"
+    - name: email
+      url: "mailto:954895224@qq.com"
+    - name: RSS
+      url: "index.xml"
+    # - name: stackoverflow
+    #   url: "https://stackoverflow.com"
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  # editPost:
+  #   URL: "https://github.com/<path_to_repo>/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# 右上角菜单
+menu:
+  main:
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    # - identifier: search
+    #   name: Search
+    #   url: /search/
+    #   weight: 40
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    # -------highlight.js配置-------
+    noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+# for search page
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
